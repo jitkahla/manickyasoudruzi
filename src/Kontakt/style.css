@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@0;1&family=Sonsie+One&display=swap');
+
+h2 {
+  font-size: 2rem;
+  padding: 3rem;
+  font-family: 'Sonsie One', cursive;
+}
+
+h3 {
+  margin-bottom: 20%;
+  text-align: center;
+  font-family: 'Sonsie One', cursive;
+  font-style: normal;
+}
+
+.contact {
+  display: flex;
+  justify-content: space-evenly;
+  font-family: 'Roboto Mono', monospace;
+  font-style: italic;
+}
+
+.contact__detail {
+  display: flex;
+  justify-content: left;
+  gap: 20px;
+}
+
+.manicka {
+  padding: 2%;
+  max-width: 40%;
+}
+
+.profile-img {
+  width: 50%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: auto auto 10% auto;
+}
+
+.icon {
+  max-height: 24px;
+  aspect-ratio: 1/1;
+}
+
+@media (max-width: 540px) {
+  .contact {
+    flex-direction: column;
+    align-items: center;
+  }
+}

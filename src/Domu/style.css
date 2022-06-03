@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@0;1&family=Sonsie+One&display=swap');
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.container {
+  max-width: 80vmin;
+  margin: 0 auto;
+  padding-top: 30vh;
+  color: #ffffff;
+}
+
+h1 {
+  font-size: 3rem;
+  padding-bottom: 2rem;
+  font-family: 'Sonsie One', cursive;
+}
+
+p {
+  padding-bottom: 1rem;
+  font-family: 'Roboto Mono', monospace;
+  font-style: italic;
+}
+
+.start {
+  display: block;
+  background-color: #ff0000;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  margin: auto;
+  padding: 0.6rem;
+  line-height: 3.5;
+  font-family: 'Sonsie One', cursive;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  text-decoration: none;
+}
+
+.start:hover {
+  background-color: #fa6161;
+  cursor: pointer;
+}
+
+.timeline {
+  color: #000000;
+  padding: 3rem;
+  font-family: 'Roboto Mono', monospace;
+  font-style: italic;
+  width: 100vw;
+  height: 100vh;
+}
+
+figure img {
+  margin: auto;
+  padding: 2rem;
+  display: block;
+  max-width: 100%;
+}
+figcaption {
+  text-align: center;
+}

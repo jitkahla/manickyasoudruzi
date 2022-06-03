@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@0;1&family=Sonsie+One&display=swap');
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.bg-img {
+  background: top/cover #00000090 url('img/andros.jpg') no-repeat fixed;
+  height: 100vh;
+  background-blend-mode: darken;
+}
+
+header {
+  align-items: center;
+  height: 3rem;
+  color: #ffffff;
+  background-color: #000000;
+  font-family: 'Sonsie One', cursive;
+}
+
+nav {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+nav a {
+  margin: 1rem;
+  font-size: 0.7rem;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus {
+  border-bottom: 1px solid #ffffff;
+}
+
+.nav-btn {
+  width: 2rem;
+  height: 2rem;
+  background-image: url('img/white-menu-icon.jpg');
+  background-size: contain;
+  background-color: transparent;
+  margin: 0.5rem;
+  cursor: pointer;
+}
+
+.nav-btn:focus {
+  outline: none;
+}
+
+.nav-mobile {
+  background-color: #000000;
+  padding: 1rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-mobile a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.nav-mobile a:hover,
+.nav-mobile a:focus {
+  border-bottom: 1px solid #ffffff;
+}
+
+.nav--closed.nav-mobile {
+  display: none;
+}
+
+@media (max-width: 540px) {
+  nav {
+    display: none;
+  }
+}
+@media (min-width: 540px) {
+  .nav-btn {
+    display: none;
+  }
+  .nav-mobile {
+    display: none;
+  }
+}

@@ -20,11 +20,7 @@ export const TimelineContent = ({ title, text, quiz, imgSrc }) => {
       iconClassName="timeline__icon"
     >
       <div className="timeline__box">
-<<<<<<< HEAD
-        <div>
-=======
         <div className="box__text">
->>>>>>> 963484e2afd532a22138f6264d9b91ea62bad2bd
           <h3>{title}</h3>
           <p>{text}</p>
           {quiz ? (

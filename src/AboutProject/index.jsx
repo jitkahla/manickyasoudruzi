@@ -1,4 +1,5 @@
 import React from 'react';
+import { MultipleChoice } from '../quiz/MultipleChoice';
 import './style.css';
 import { Shopping } from '../quiz/Shopping';
 

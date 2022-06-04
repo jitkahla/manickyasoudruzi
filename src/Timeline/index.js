@@ -4,6 +4,7 @@ import {
   VerticalTimelineElement,
 } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
+import { TimelineContent } from '../TimelineContent';
 
 const Timeline = () => (
   <VerticalTimeline lineColor={'#000000'} layout={'2-columns'}>
@@ -15,12 +16,14 @@ const Timeline = () => (
       iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
       /*  icon={<WorkIcon />} */
     >
-      <h3 className="vertical-timeline-element-title">Creative Director</h3>
-      <h4 className="vertical-timeline-element-subtitle">Miami, FL</h4>
-      <p>
-        Creative Direction, User Experience, Visual Design, Project Management,
-        Team Leading
-      </p>
+      <TimelineContent
+        title={'Komunisté se ujali moci'}
+        text={
+          'Zvláštností komunistického převratu v Československu, ve srovnání s obdobnými procesy v jiných státech východní Evropy, byla skutečnost, že proběhl za podpory velké části obyvatelstva.'
+        }
+        quiz={false}
+        imgSrc={'../img/dav2.jpg'}
+      />
     </VerticalTimelineElement>
     <VerticalTimelineElement
       className="vertical-timeline-element--work"

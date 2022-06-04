@@ -50,10 +50,10 @@ createRoot(document.querySelector('#app')).render(
     <Routes>
       <Route path="/" element={<App />}>
         <Route index element={<Home />} />
-        <Route path="domu" element={<Home />} />
-        <Route path="oprojektu" element={<AboutProject />} />
-        <Route path="onas" element={<AboutUs />} />
-        <Route path="kontakt" element={<Contacts />} />
+        <Route path="home" element={<Home />} />
+        <Route path="aboutproject" element={<AboutProject />} />
+        <Route path="aboutus" element={<AboutUs />} />
+        <Route path="contacts" element={<Contacts />} />
         <Route
           path="*"
           element={

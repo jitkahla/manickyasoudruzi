@@ -1,4 +1,5 @@
 import React from 'react';
+import './style.css';
 import { VerticalTimelineElement } from 'react-vertical-timeline-component';
 
 export const TimelineContent = ({ title, text, quiz, imgSrc }) => {
@@ -19,14 +20,16 @@ export const TimelineContent = ({ title, text, quiz, imgSrc }) => {
       /*  icon={<WorkIcon />} */
     >
       <div className="timeline__box">
-        <h3>{title}</h3>
-        <p>{text}</p>
-        {quiz ? (
-          <div className="controls">
-            <button>Kvíz</button>
-            <button>Více...</button>
-          </div>
-        ) : null}
+        <div className="box__text">
+          <h3>{title}</h3>
+          <p>{text}</p>
+          {quiz ? (
+            <div className="controls">
+              <button>Kvíz</button>
+              <button>Více...</button>
+            </div>
+          ) : null}
+        </div>
         <img src={imgSrc} />
       </div>
     </VerticalTimelineElement>

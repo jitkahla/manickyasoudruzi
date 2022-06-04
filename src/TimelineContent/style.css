@@ -1,0 +1,24 @@
+.timeline__box {
+  display: flex;
+  border: 2px solid var(--border);
+  border-radius: 15px;
+  padding: 5%;
+}
+
+.box__text {
+  font-size: 12px;
+}
+
+.timeline__box h3 {
+  text-align: left;
+  margin-bottom: 10%;
+}
+
+.timeline__box img {
+  max-width: 50%;
+  object-fit: contain;
+}
+
+.vertical-timeline-element-content {
+  box-shadow: none;
+}

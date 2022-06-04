@@ -17,15 +17,16 @@ export const SingleChoiceItem = ({
         {options.map((text, i) => (
           <button
             key={i + 1}
-            onClick={() => setResult(text === correctOption)}
+            onClick={() => setResult(text)}
             disabled={result !== null}
+            className={result === text ? 'selectedOption' : null}
           >
             {text}
           </button>
         ))}
       </div>
-      {result === true && <p>Výborně</p>}
-      {result === false && <p>Špatně</p>}
+      {result === correctOption && <p>Výborně</p>}
+      {result !== correctOption && result !== null && <p>Špatně</p>}
       {result !== null && <div>Řešení: {resultText}</div>}
     </div>
   );

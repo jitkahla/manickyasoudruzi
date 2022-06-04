@@ -10,23 +10,25 @@ export const TimelineContent = ({ title, text, quiz, imgSrc }) => {
         color: 'var(--text)',
       }}
       contentArrowStyle={{ borderRight: '7px solid  var(--red)' }}
-      date="2011 - present"
       iconStyle={{
         background: 'var(--red)',
         color: '#fff',
         boxShadow: 'none',
       }}
-      /*  icon={<WorkIcon />} */
+      icon={<span>1948</span>}
+      iconClassName="timeline__icon"
     >
       <div className="timeline__box">
-        <h3>{title}</h3>
-        <p>{text}</p>
-        {quiz ? (
-          <div className="controls">
-            <button>Kvíz</button>
-            <button>Více...</button>
-          </div>
-        ) : null}
+        <div>
+          <h3>{title}</h3>
+          <p>{text}</p>
+          {quiz ? (
+            <div className="controls">
+              <button>Kvíz</button>
+              <button>Více...</button>
+            </div>
+          ) : null}
+        </div>
         <img src={imgSrc} />
       </div>
     </VerticalTimelineElement>

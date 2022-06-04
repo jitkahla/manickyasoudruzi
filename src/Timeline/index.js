@@ -16,78 +16,13 @@ const Timeline = () => (
       quiz={false}
       imgSrc={'/img/unor48.jpg'}
     />
-    <VerticalTimelineElement
-      className="vertical-timeline-element--work"
-      date="2010 - 2011"
-      iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-      /* icon={<WorkIcon />} */
-    >
-      <h3 className="vertical-timeline-element-title">Art Director</h3>
-      <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>
-      <p>
-        Creative Direction, User Experience, Visual Design, SEO, Online
-        Marketing
-      </p>
-    </VerticalTimelineElement>
-    <VerticalTimelineElement
-      className="vertical-timeline-element--work"
-      date="2008 - 2010"
-      iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-      /* icon={<WorkIcon />} */
-    >
-      <h3 className="vertical-timeline-element-title">Web Designer</h3>
-      <h4 className="vertical-timeline-element-subtitle">Los Angeles, CA</h4>
-      <p>User Experience, Visual Design</p>
-    </VerticalTimelineElement>
-    <VerticalTimelineElement
-      className="vertical-timeline-element--work"
-      date="2006 - 2008"
-      iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-      /* icon={<WorkIcon />} */
-    >
-      <h3 className="vertical-timeline-element-title">Web Designer</h3>
-      <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>
-      <p>User Experience, Visual Design</p>
-    </VerticalTimelineElement>
-    <VerticalTimelineElement
-      className="vertical-timeline-element--education"
-      date="April 2013"
-      iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
-      /*  icon={<SchoolIcon />} */
-    >
-      <h3 className="vertical-timeline-element-title">
-        Content Marketing for Web, Mobile and Social Media
-      </h3>
-      <h4 className="vertical-timeline-element-subtitle">Online Course</h4>
-      <p>Strategy, Social Media</p>
-    </VerticalTimelineElement>
-    <VerticalTimelineElement
-      className="vertical-timeline-element--education"
-      date="November 2012"
-      iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
-      /* icon={<SchoolIcon />} */
-    >
-      <h3 className="vertical-timeline-element-title">
-        Agile Development Scrum Master
-      </h3>
-      <h4 className="vertical-timeline-element-subtitle">Certification</h4>
-      <p>Creative Direction, User Experience, Visual Design</p>
-    </VerticalTimelineElement>
-    <VerticalTimelineElement
-      className="vertical-timeline-element--education"
-      date="2002 - 2006"
-      iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
-      /*  icon={<SchoolIcon />} */
-    >
-      <h3 className="vertical-timeline-element-title">
-        Bachelor of Science in Interactive Digital Media Visual Imaging
-      </h3>
-      <h4 className="vertical-timeline-element-subtitle">Bachelor Degree</h4>
-      <p>Creative Direction, Visual Design</p>
-    </VerticalTimelineElement>
-    <VerticalTimelineElement
-      iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
-      /*  icon={<StarIcon />} */
+    <TimelineContent
+      title={'Soudruzi na věčné časy?'}
+      text={
+        'Nástup komunismu v Československu s sebou z dnešního pohledu přinesl i rozdělení společnosti na komunistické soudruhy a třídní nepřátele. Komunističtí soudruzi se pak ihned začali zbavovat svých třídních nepřátel, tedy lidí s odlišným politickým viděním světa, buržoazie, inteligence… Zdálo by se, že tedy být na té “správné” straně je vcelku jednoduchá záležitost a stačí k tomu stranická knížka KSČ a zápal pro věc. Obludnost komunistického totalitního režimu ale spočívala v tom, že na druhé straně barikády se mohl ocitnout najednou i ten, který likvidační mašinerii oponentů sám pomáhal budovat.'
+      }
+      quiz={true}
+      imgSrc={'/img/tuzex.jpg'}
     />
   </VerticalTimeline>
 );

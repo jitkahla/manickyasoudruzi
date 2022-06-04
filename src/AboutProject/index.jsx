@@ -2,12 +2,14 @@ import React from 'react';
 import { MultipleChoice } from '../quiz/MultipleChoice';
 import './style.css';
 import { Shopping } from '../quiz/Shopping';
+import { SingleChoice } from '../quiz/SingleChoice';
 
 const AboutProject = () => {
   return (
     <main>
       <h2>O projektu</h2>
       <div className="project-info">
+        <SingleChoice />
         <Shopping />
         <p>
           Rády bychom vytvořily web věnovaný moderní historii, v co

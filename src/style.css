@@ -3,7 +3,7 @@
 /*CSS variables*/
 
 :root {
-  --background: lightgrey;
+  --background: rgb(244, 243, 243);
   --red: rgb(139, 14, 14);
   --text: rgb(34, 32, 32);
   --border: rgb(116, 106, 106);

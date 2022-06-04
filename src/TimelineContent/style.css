@@ -1,24 +1,66 @@
-.timeline__box {
-  display: flex;
-  border: 2px solid var(--border);
-  border-radius: 15px;
-  padding: 5%;
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@0;1&family=Sonsie+One&display=swap');
 
-.box__text {
-  font-size: 12px;
+.timeline__box {
+  border-radius: 15px;
+  padding: 0;
 }
 
 .timeline__box h3 {
+  font-size: 1.5rem;
   text-align: left;
-  margin-bottom: 10%;
+  margin-bottom: 5%;
 }
 
-.timeline__box img {
-  max-width: 50%;
-  object-fit: contain;
+.box__image {
+  width: 100%;
+  max-height: 20%;
+  margin: 0;
+}
+
+.box__text {
+  font-size: 1rem;
+  padding: 5%;
+}
+
+.box__controls {
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+  gap: 15%;
+}
+
+.box__button {
+  height: 3rem;
+  width: 8rem;
+  font-family: 'Roboto Mono', sans-serif;
+  font-size: 1.2rem;
+  border: 2px solid white;
+  border-radius: 5px;
+  background-color: var(--red);
+  color: white;
+}
+
+.box__button--more {
+  background-color: var(--text);
 }
 
 .vertical-timeline-element-content {
   box-shadow: none;
+  border: 2px solid var(--border);
+  padding: 0;
+}
+
+.icon__text {
+  font-family: 'Roboto Mono', sans-serif;
+  font-size: 1rem;
+  top: 0.65rem;
+  left: 0.25rem;
+}
+
+@media only screen and (min-width: 1170px) {
+  .vertical-timeline--two-columns .vertical-timeline-element-content {
+    margin-left: 0;
+    padding: 0;
+    width: 44%;
+  }
 }

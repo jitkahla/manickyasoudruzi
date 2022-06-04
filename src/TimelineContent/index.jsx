@@ -16,21 +16,20 @@ export const TimelineContent = ({ title, text, quiz, imgSrc }) => {
         color: '#fff',
         boxShadow: 'none',
       }}
-      icon={<span>1948</span>}
-      iconClassName="timeline__icon"
+      icon={<span className="icon__text">1948</span>}
     >
       <div className="timeline__box">
+        <img class="box__image" src={imgSrc} />
         <div className="box__text">
           <h3>{title}</h3>
           <p>{text}</p>
           {quiz ? (
-            <div className="controls">
-              <button>Kvíz</button>
-              <button>Více...</button>
+            <div className="box__controls">
+              <button className="box__button">Kvíz</button>
+              <button className="box__button box__button--more">Více...</button>
             </div>
           ) : null}
         </div>
-        <img src={imgSrc} />
       </div>
     </VerticalTimelineElement>
   );

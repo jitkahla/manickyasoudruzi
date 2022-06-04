@@ -1,17 +1,23 @@
 import React, { useState } from 'react';
 import { DndContext } from '@dnd-kit/core';
-import { Droppable, Draggable } from '../DragAndDrop';
+import { Droppable, Container } from '../DragAndDrop';
 
 export function Shopping() {
   const [isDropped, setIsDropped] = useState(false);
-  const draggableMarkup = <Draggable>Drag me</Draggable>;
 
-  const [items, setItems] = useState();
+  const [items, setItems] = useState({
+    root: ['banan', 'jablka'],
+    container1: [],
+    container2: [],
+    container3: [],
+    container4: [],
+  });
 
   return (
-    <DndContext onDragEnd={handleDragEnd}>
-      {!isDropped ? draggableMarkup : null}
-      <Droppable>{isDropped ? draggableMarkup : 'Drop here'}</Droppable>
+    <DndContext onDragStart={handleDragStart} onDragEnd={handleDragEnd}>
+      {/* {!isDropped ? draggableMarkup : null} */}
+      {/* <Droppable>{isDropped ? draggableMarkup : 'Drop here'}</Droppable> */}
+      <Container id="root" items={items.root} />
     </DndContext>
   );
 
@@ -19,5 +25,9 @@ export function Shopping() {
     if (event.over && event.over.id === 'droppable') {
       setIsDropped(true);
     }
+  }
+
+  function handleDragStart(event) {
+    console.log('handleDragStart started');
   }
 }

@@ -47,22 +47,38 @@ export function Droppable() {
   );
 }
 
-export function Draggable() {
-  const { attributes, listeners, setNodeRef, transform } = useDraggable({
-    id: 'unique-id',
-  });
-  const style = transform
-    ? { transform: `translate3d(${transform.x}px, ${transform.y}px, 0)` }
-    : undefined;
+// export function Draggable() {
+//   const { attributes, listeners, setNodeRef, transform } = useDraggable({
+//     id: 'unique-id',
+//   });
+//   const style = transform
+//     ? { transform: `translate3d(${transform.x}px, ${transform.y}px, 0)` }
+//     : undefined;
 
+//   return <ContainerItem />;
+// }
+
+export function Container(props) {
+  const { id, items } = props;
+  const { setNodeRef } = useDroppable({
+    id: id,
+  });
   return (
-    <>
-      <button ref={setNodeRef} {...listeners} {...attributes} style={style}>
-        Drag handle 1
-      </button>
-      <button ref={setNodeRef} {...listeners} {...attributes} style={style}>
-        Drag handle 2
-      </button>
-    </>
+    <div className="droppable__image" ref={setNodeRef}>
+      {items.map((item) => (
+        <ContainerItem id={item} />
+      ))}
+    </div>
+  );
+}
+
+export function ContainerItem(props) {
+  const { attributes, listeners, setNodeRef, transform } = useDraggable({
+    id: props.id,
+  });
+  return (
+    <button ref={setNodeRef} {...listeners} {...attributes}>
+      {props.id}
+    </button>
   );
 }

@@ -16,6 +16,7 @@
   border: 2px solid var(--border);
   margin-bottom: 10%;
   line-height: 0;
+  background-color: green;
 }
 .droppable__image img {
   width: 100%;

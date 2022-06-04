@@ -8,23 +8,14 @@ import { TimelineContent } from '../TimelineContent';
 
 const Timeline = () => (
   <VerticalTimeline lineColor={'#000000'} layout={'2-columns'}>
-    <VerticalTimelineElement
-      className="vertical-timeline-element--work"
-      contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-      contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
-      date="2011 - present"
-      iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-      /*  icon={<WorkIcon />} */
-    >
-      <TimelineContent
-        title={'Komunisté se ujali moci'}
-        text={
-          'Zvláštností komunistického převratu v Československu, ve srovnání s obdobnými procesy v jiných státech východní Evropy, byla skutečnost, že proběhl za podpory velké části obyvatelstva.'
-        }
-        quiz={false}
-        imgSrc={'../img/dav2.jpg'}
-      />
-    </VerticalTimelineElement>
+    <TimelineContent
+      title={'Komunisté se ujali moci'}
+      text={
+        'Zvláštností komunistického převratu v Československu, ve srovnání s obdobnými procesy v jiných státech východní Evropy, byla skutečnost, že proběhl za podpory velké části obyvatelstva.'
+      }
+      quiz={false}
+      imgSrc={'../img/dav2.jpg'}
+    />
     <VerticalTimelineElement
       className="vertical-timeline-element--work"
       date="2010 - 2011"

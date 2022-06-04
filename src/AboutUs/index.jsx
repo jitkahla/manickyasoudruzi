@@ -5,7 +5,7 @@ import './style.css';
 import veronikaImg from '../img/veronika_profile.jpg';
 import jitkaImg from '../img/jitka_profile.jpg';
 
-const Onas = () => {
+const AboutUs = () => {
   return (
     <>
       <h2>O nás</h2>
@@ -67,4 +67,4 @@ const Onas = () => {
   );
 };
 
-export default Onas;
+export default AboutUs;

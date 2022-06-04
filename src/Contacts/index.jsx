@@ -7,7 +7,7 @@ import phoneIcon from '../img/phone_icon.png';
 import linkedInIcon from '../img/linkedin_icon.png';
 import githubIcon from '../img/github_icon.png';
 
-const Kontakt = () => {
+const Contacts = () => {
   return (
     <main>
       <h2>Kontakty</h2>
@@ -79,4 +79,4 @@ const Kontakt = () => {
   );
 };
 
-export default Kontakt;
+export default Contacts;

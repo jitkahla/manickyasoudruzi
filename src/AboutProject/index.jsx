@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
 
-const Oprojektu = () => {
+const AboutProject = () => {
   return (
     <main>
       <h2>O projektu</h2>
@@ -25,4 +25,4 @@ const Oprojektu = () => {
   );
 };
 
-export default Oprojektu;
+export default AboutProject;

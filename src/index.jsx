@@ -1,9 +1,9 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import Domu from './Domu';
-import Kontakt from './Kontakt';
-import Oprojektu from './Oprojektu';
-import Onas from './Onas';
+import Home from './Home';
+import Contacts from './Contacts';
+import AboutProject from './AboutProject';
+import AboutUs from './AboutUs';
 import './style.css';
 import { BrowserRouter, Routes, Route, Link, Outlet } from 'react-router-dom';
 import { useState } from 'react';
@@ -20,10 +20,10 @@ const App = () => {
           className="nav-btn"
         ></button>
         <div className={navopen ? 'nav-mobile' : 'nav--closed nav-mobile'}>
-          <a onClick={closeNav} href="/Domu">
+          <a onClick={closeNav} href="/Home">
             Domů
           </a>
-          <a onClick={closeNav} href="/Oprojektu">
+          <a onClick={closeNav} href="/AboutProject">
             O projektu
           </a>
           <a onClick={closeNav} href="/Onas">
@@ -34,10 +34,10 @@ const App = () => {
           </a>
         </div>
         <nav>
-          <Link to="/Domu">Domů</Link>
-          <Link to="/Oprojektu">O projektu</Link>
-          <Link to="/Onas">O nás</Link>
-          <Link to="/Kontakt">Kontakty</Link>
+          <Link to="/Home">Domů</Link>
+          <Link to="/AboutProject">O projektu</Link>
+          <Link to="/AboutUs">O nás</Link>
+          <Link to="/Contacts">Kontakty</Link>
         </nav>
       </header>
       <Outlet />
@@ -49,11 +49,11 @@ createRoot(document.querySelector('#app')).render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />}>
-        <Route index element={<Domu />} />
-        <Route path="domu" element={<Domu />} />
-        <Route path="oprojektu" element={<Oprojektu />} />
-        <Route path="onas" element={<Onas />} />
-        <Route path="kontakt" element={<Kontakt />} />
+        <Route index element={<Home />} />
+        <Route path="domu" element={<Home />} />
+        <Route path="oprojektu" element={<AboutProject />} />
+        <Route path="onas" element={<AboutUs />} />
+        <Route path="kontakt" element={<Contacts />} />
         <Route
           path="*"
           element={

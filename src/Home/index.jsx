@@ -3,7 +3,7 @@ import { useState } from 'react';
 import './style.css';
 import Timeline from '../Timeline';
 
-const Domu = () => (
+const Home = () => (
   <main>
     <div className="bg-img">
       <div className="container">
@@ -17,4 +17,4 @@ const Domu = () => (
   </main>
 );
 
-export default Domu;
+export default Home;

@@ -1,0 +1,22 @@
+.droppable__box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: 0;
+  max-width: 60%;
+}
+
+.droppable__box h3 {
+  margin-bottom: 5%;
+  line-height: normal;
+}
+
+.droppable__image {
+  border: 2px solid var(--border);
+  margin-bottom: 10%;
+  line-height: 0;
+}
+.droppable__image img {
+  width: 100%;
+}

@@ -1,11 +1,13 @@
 import React from 'react';
 import './style.css';
+import { Shopping } from '../quiz/Shopping';
 
 const AboutProject = () => {
   return (
     <main>
       <h2>O projektu</h2>
       <div className="project-info">
+        <Shopping />
         <p>
           Rády bychom vytvořily web věnovaný moderní historii, v co
           nejpoutavější formě s interaktivními prvky. Zpracujeme výběr několika

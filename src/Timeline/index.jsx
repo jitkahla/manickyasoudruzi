@@ -6,6 +6,7 @@ import {
 } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import { TimelineContent } from '../TimelineContent';
+//import { Shopping } from '../quiz/Shopping';
 
 const Timeline = () => (
   <VerticalTimeline lineColor={'#000000'} layout={'2-columns'}>

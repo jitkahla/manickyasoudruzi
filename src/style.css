@@ -3,11 +3,9 @@
 /*CSS variables*/
 
 :root {
-  --background-primary: lightgrey;
-  --border-color: rgb(139, 14, 14);
+  --background: lightgrey;
+  --red: rgb(139, 14, 14);
   --text: rgb(34, 32, 32);
-  --button-color: rgb(139, 14, 14);
-  --timeline-point-color: rgb(139, 14, 14);
 }
 
 *,

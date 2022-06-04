@@ -7,7 +7,7 @@ export const TimelineContent = ({ title, text, quiz, imgSrc }) => {
     <VerticalTimelineElement
       className="vertical-timeline-element--work"
       contentStyle={{
-        background: 'var(background-primary)',
+        background: 'var(--background)',
         color: 'var(--text)',
       }}
       contentArrowStyle={{ borderRight: '7px solid  var(--red)' }}

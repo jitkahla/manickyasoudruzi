@@ -14,7 +14,7 @@ const Timeline = () => (
         'Zvláštností komunistického převratu v Československu, ve srovnání s obdobnými procesy v jiných státech východní Evropy, byla skutečnost, že proběhl za podpory velké části obyvatelstva.'
       }
       quiz={false}
-      imgSrc={'../img/dav2.jpg'}
+      imgSrc={'/img/unor48.jpg'}
     />
     <VerticalTimelineElement
       className="vertical-timeline-element--work"

@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@0;1&family=Sonsie+One&display=swap');
 
+/*CSS variables*/
+
+:root {
+  --background-primary: lightgrey;
+  --border-color: rgb(139, 14, 14);
+  --text: rgb(34, 32, 32);
+  --button-color: rgb(139, 14, 14);
+  --timeline-point-color: rgb(139, 14, 14);
+}
+
 *,
 :after,
 :before {

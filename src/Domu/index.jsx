@@ -1,6 +1,5 @@
 import React from 'react';
 import { useState } from 'react';
-import osa from '../img/osa1.png';
 import './style.css';
 import Timeline from '../Timeline';
 
@@ -12,9 +11,9 @@ const Domu = () => (
         <p>
           Mrkni na naši časovou osu a zjisti něco o komunismu v Československu
         </p>
-        <Timeline />
       </div>
     </div>
+    <Timeline />
   </main>
 );
 

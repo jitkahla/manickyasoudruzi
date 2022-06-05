@@ -8,7 +8,7 @@ const initialState = {
   4: false,
 };
 
-export const MultipleChoice = () => {
+export const MultipleChoice = ({ title, quizText, options, solution }) => {
   const [selected, setSelected] = useState(initialState);
   const [result, setResult] = useState(null);
   const handleClick = (id) => {
@@ -22,8 +22,7 @@ export const MultipleChoice = () => {
     selected[id] ? { border: '2px solid red' } : null;
 
   const evaluate = () => {
-    const solution = JSON.stringify({ 1: true, 2: true, 3: true, 4: false });
-    if (JSON.stringify(selected) === solution) {
+    if (JSON.stringify(selected) === JSON.stringify(solution)) {
       setResult(true);
     } else {
       setResult(false);
@@ -33,25 +32,17 @@ export const MultipleChoice = () => {
   return (
     <div>
       <h2>Kvíz</h2>
-      <h3>Máničky</h3>
-      <q>
-        {' '}
-        Snažili se mě přesvědčit, ať se ostříhám, že mi to nesluší. Ať jsem
-        rozumný. Odmítl jsem. Tak mi řekli, že budu mít problémy.
-      </q>
-      <p>Písničkář Jaroslav Hutka</p>
-      <p>
-        Které z osob na fotkách by mohly mít problémy kvůli svému účesu? Označ:
-      </p>
+      <h3>{title}</h3>
+      {quizText}
       <div>
-        {[...Array(4)].map((_, i) => (
+        {Object.entries(options).map(([i, src]) => (
           <img
-            key={i + 1}
-            id={i + 1}
-            onClick={() => handleClick(i + 1)}
-            src={`/img/manicka${i + 1}.png`}
+            key={i}
+            id={i}
+            onClick={() => handleClick(i)}
+            src={src}
             alt=""
-            style={getImgStyle(i + 1)}
+            style={getImgStyle(i)}
           />
         ))}
       </div>

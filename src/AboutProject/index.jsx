@@ -5,12 +5,14 @@ import { Shopping } from '../quiz/Shopping';
 import { SingleChoice } from '../quiz/SingleChoice/SingleChoice';
 import { Comrads } from '../quiz/Comrads';
 import { Manicka } from '../quiz/Manicka';
+import { Map } from '../quiz/Map/Map';
 
 const AboutProject = () => {
   return (
     <main>
       <h2>O projektu</h2>
       <div className="project-info">
+        <Map />
         <Comrads />
         <Manicka />
 

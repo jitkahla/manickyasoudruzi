@@ -13,12 +13,11 @@ export function Shopping() {
     tuzex: [],
     unavailable: [],
   });
-  console.log(items);
+
   const [activeId, setActiveId] = useState(null);
   const [isCorrect, setIsCorrect] = useState(false);
 
   const findContainerId = (dragItemId) => {
-    /* console.log(items); */
     const itemsArray = Object.keys(items);
     const initialContainer = itemsArray.find((key) =>
       items[key].includes(dragItemId),
@@ -44,7 +43,7 @@ export function Shopping() {
     const initialContainerWithoutDragItem = items[initialContainer].filter(
       (item) => item !== activeDragItem.id,
     );
-    console.log(initialContainerWithoutDragItem);
+
     const overContainerWithDragItem = [...items[overContainer.id]];
     overContainerWithDragItem.push(activeDragItem.id);
 
@@ -77,7 +76,7 @@ export function Shopping() {
           containsAll = containsAll && correctAnswers[id].indexOf(item) !== -1;
         });
       });
-      console.log(containsAll);
+
       return containsAll;
     };
 

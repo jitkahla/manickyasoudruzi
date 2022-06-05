@@ -1,6 +1,8 @@
 import React from 'react';
 import './style.css';
 import { VerticalTimelineElement } from 'react-vertical-timeline-component';
+import { useModal, Modal } from 'react-morphing-modal';
+import 'react-morphing-modal/dist/ReactMorphingModal.css';
 
 export const TimelineContent = ({ title, text, quiz, imgSrc }) => {
   return (

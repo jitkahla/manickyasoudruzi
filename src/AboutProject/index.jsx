@@ -9,8 +9,6 @@ const AboutProject = () => {
     <main>
       <h2>O projektu</h2>
       <div className="project-info">
-        <SingleChoice />
-        <Shopping />
         <p>
           Rády bychom vytvořily web věnovaný moderní historii, v co
           nejpoutavější formě s interaktivními prvky. Zpracujeme výběr několika

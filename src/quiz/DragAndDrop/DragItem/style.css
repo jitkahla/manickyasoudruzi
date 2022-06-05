@@ -1,0 +1,7 @@
+.drag-item {
+  /* z-index: 2; */
+  background-color: aquamarine;
+  padding: 50px;
+  margin: 10px;
+  flex: 1;
+}

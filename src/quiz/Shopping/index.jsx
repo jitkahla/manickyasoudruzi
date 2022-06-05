@@ -76,13 +76,14 @@ export function Shopping() {
 
   const [activeId, setActiveId] = useState(null);
   const [isCorrect, setIsCorrect] = useState(false);
+  const [displaySolution, setDisplaySolution] = useState(false);
 
   const [message, setMessage] = useState(null);
 
-  const findContainerId = (dragItemId) => {
-    const itemsArray = Object.keys(items);
+  const findContainerId = (dragItemId, containers) => {
+    const itemsArray = Object.keys(containers);
     const initialContainer = itemsArray.find((key) =>
-      items[key].includes(dragItemId),
+      containers[key].includes(dragItemId),
     );
 
     return initialContainer;
@@ -95,7 +96,7 @@ export function Shopping() {
 
   function handleDragEnd(event) {
     const activeDragItem = event.active;
-    const initialContainerId = findContainerId(activeDragItem.id);
+    const initialContainerId = findContainerId(activeDragItem.id, items);
 
     const overContainer = event.over;
     if (
@@ -120,78 +121,83 @@ export function Shopping() {
       return newItems;
     });
     setActiveId(null);
+    setDisplaySolution(false);
+    setMessage(null);
   }
+  const correctAnswers = {
+    root: [],
+    available: [
+      'Chléb Šumava',
+      'Hrušky',
+      'Čokoláda Orion',
+      'Špekáčky',
+      'Salám gothaj',
+      'Ovocné sirupy (šťávy)',
+      'Mléko',
+      'Kofola',
+      'Top&topic',
+      'Sýr Eidam',
+      'Jelení lůj',
+      'Lak na vlasy Taft',
+      'Krém Nivea',
+      'Zubní pasta Elmex',
+      'Dekorativní kosmetika Dermacol',
+      'Jar na nádobí',
+      'Nanuk Míša',
+    ],
+    undercounter: [
+      'Toaletní papír',
+      'Banány',
+      'Pomeranče',
+      'Mandarinky',
+      'Hroznové víno',
+      'Sójová omáčka',
+      'Svíčková (maso)',
+      'Dámské vložky',
+      'Kroužky na záclony',
+      'Spodní prádlo',
+      'Nábytek',
+      'Stavební materiál',
+      'Pribináček',
+      'Dámské silonové punčochy',
+      'Jízdní kolo',
+      'Zahradnické náčiní',
+      'Zavařovací víčka',
+      'Mixér Eta',
+      'Kečup',
+    ],
+    tuzex: [
+      'Zubní pasta Colgate',
+      'Rybí filé Nowaco',
+      'Deodorant Dove',
+      'Obuv Baťa',
+      'Jogurty Danone',
+      'Automobil Škoda Favorit',
+      'Pivo Heineken',
+      'Prací prášek Ariel',
+      'Televizor Samsung',
+      'Pivo Bernard',
+    ],
+    unavailable: [
+      'Džíny Rifle',
+      'Pračka Tatramat',
+      'Kazetový přehrávač Panasonic',
+      'Coca-Cola',
+      'Pražská šunka',
+      'Lednice Calex',
+      'Automobil Renault',
+      'Uherský salám',
+      'Gin Beefeater',
+      'Mýdlo Fa',
+      'Cigarety Camel',
+      'Stavebnice Lego',
+      'Likér Bols',
+    ],
+  };
+
   function evaluate() {
-    const correctAnswers = {
-      root: [],
-      available: [
-        'Chléb Šumava',
-        'Hrušky',
-        'Čokoláda Orion',
-        'Špekáčky',
-        'Salám gothaj',
-        'Ovocné sirupy (šťávy)',
-        'Mléko',
-        'Kofola',
-        'Top&topic',
-        'Sýr Eidam',
-        'Jelení lůj',
-        'Lak na vlasy Taft',
-        'Krém Nivea',
-        'Zubní pasta Elmex',
-        'Dekorativní kosmetika Dermacol',
-        'Jar na nádobí',
-        'Nanuk Míša',
-      ],
-      undercounter: [
-        'Toaletní papír',
-        'Banány',
-        'Pomeranče',
-        'Mandarinky',
-        'Hroznové víno',
-        'Sójová omáčka',
-        'Svíčková (maso)',
-        'Dámské vložky',
-        'Kroužky na záclony',
-        'Spodní prádlo',
-        'Nábytek',
-        'Stavební materiál',
-        'Pribináček',
-        'Dámské silonové punčochy',
-        'Jízdní kolo',
-        'Zahradnické náčiní',
-        'Zavařovací víčka',
-        'Mixér Eta',
-        'Kečup',
-      ],
-      tuzex: [
-        'Zubní pasta Colgate',
-        'Rybí filé Nowaco',
-        'Deodorant Dove',
-        'Obuv Baťa',
-        'Jogurty Danone',
-        'Automobil Škoda Favorit',
-        'Pivo Heineken',
-        'Prací prášek Ariel',
-        'Televizor Samsung',
-        'Pivo Bernard',
-      ],
-      unavailable: [
-        'Džíny Rifle',
-        'Pračka Tatramat',
-        'Kazetový přehrávač Panasonic',
-        'Coca-Cola',
-        'Pražská šunka',
-        'Lednice Calex',
-        'Automobil Renault',
-        'Uherský salám',
-        'Gin Beefeater',
-        'Mýdlo Fa',
-        'Cigarety Camel',
-        'Stavebnice Lego',
-        'Likér Bols',
-      ],
-    };
+    setDisplaySolution(true);
+
     const containsAll = items.root.every((item) =>
       correctAnswers.root.indexOf(item),
     );
@@ -218,6 +224,15 @@ export function Shopping() {
     }
   }
 
+  const getDragItemClass = (id) => {
+    if (displaySolution === false) {
+      return;
+    }
+    return findContainerId(id, items) !== findContainerId(id, correctAnswers)
+      ? 'incorrect-answer'
+      : null;
+  };
+
   return (
     <DndContext onDragStart={handleDragStart} onDragEnd={handleDragEnd}>
       <button onClick={evaluate}>Vyhodnotit</button>
@@ -228,6 +243,7 @@ export function Shopping() {
           id={'root'}
           title={`Zboží k rozřazení`}
           items={items.root}
+          getDragItemClass={getDragItemClass}
         />
         <DroppableContainer
           id={'available'}
@@ -236,6 +252,7 @@ export function Shopping() {
           imgSrc={'/img/cart.png'}
           imgAlt={'Nákupní košík'}
           items={items.available}
+          getDragItemClass={getDragItemClass}
         />
         <DroppableContainer
           id={'undercounter'}
@@ -244,6 +261,7 @@ export function Shopping() {
           imgSrc={'/img/pult.jpeg'}
           imgAlt={'Retro prodejna'}
           items={items.undercounter}
+          getDragItemClass={getDragItemClass}
         />
         <DroppableContainer
           id={'tuzex'}
@@ -251,6 +269,7 @@ export function Shopping() {
           imgSrc={'/img/tuzex.png'}
           imgAlt={'Tuzex'}
           items={items.tuzex}
+          getDragItemClass={getDragItemClass}
         />
         <DroppableContainer
           id={'unavailable'}
@@ -259,9 +278,14 @@ export function Shopping() {
           imgSrc={'/img/empty-basket.jpg'}
           imgAlt={'Prázdný košík'}
           items={items.unavailable}
+          getDragItemClass={getDragItemClass}
         />
       </section>
-      <DragOverlay>{activeId ? <DragItem id={activeId} /> : null}</DragOverlay>
+      <DragOverlay>
+        {activeId ? (
+          <DragItem id={activeId} getDragItemClass={getDragItemClass} />
+        ) : null}
+      </DragOverlay>
     </DndContext>
   );
 }

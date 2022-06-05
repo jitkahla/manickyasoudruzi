@@ -3,7 +3,14 @@ import './style.css';
 import { useDroppable } from '@dnd-kit/core';
 import { DragItem } from '../DragItem';
 
-export const DroppableContainer = ({ id, items, title, imgSrc, imgAlt }) => {
+export const DroppableContainer = ({
+  id,
+  items,
+  title,
+  imgSrc,
+  imgAlt,
+  getDragItemClass,
+}) => {
   const { setNodeRef } = useDroppable({ id });
 
   return (
@@ -11,7 +18,7 @@ export const DroppableContainer = ({ id, items, title, imgSrc, imgAlt }) => {
       <h3>{title}</h3>
       <img src={imgSrc} alt={imgAlt} />
       {items.map((item) => (
-        <DragItem key={item} id={item} />
+        <DragItem key={item} id={item} getDragItemClass={getDragItemClass} />
       ))}
     </div>
   );

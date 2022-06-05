@@ -12,3 +12,7 @@
   margin-bottom: 5%;
   line-height: normal;
 }
+
+.incorrect-answer {
+  border: 2px solid red;
+}

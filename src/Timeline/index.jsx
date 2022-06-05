@@ -7,6 +7,7 @@ import { Comrads } from '../quiz/Comrads';
 import { Map } from '../quiz/Map';
 import { Manicka } from '../quiz/Manicka';
 import { SingleChoice } from '../quiz/SingleChoice/SingleChoice';
+import { Shopping } from '../quiz/Shopping';
 
 const Timeline = () => (
   <VerticalTimeline lineColor={'#000000'} layout={'2-columns'}>
@@ -63,7 +64,7 @@ const Timeline = () => (
       text={
         'V roce 1977 vznikl dnes již “kultovní” televizní seriál Žena za pultem, o životě a starostech obyčejné prodavačky Anny Holubové a jejích kolegů z prodejny potravin. Znázorněná samoobsluha, ale rozhodně nebyla na tehdejší poměry obyčejná, scény byly plné pultů překypujících všemi možnými potravinami a všichni zaměstnanci byli nadmíru ochotní, což se tehdejší realitě zdaleka nepřibližovalo.'
       }
-      quiz={true}
+      quiz={<Shopping />}
       imgSrc={'img/zena-za-pultem.png'}
     />
     <TimelineContent

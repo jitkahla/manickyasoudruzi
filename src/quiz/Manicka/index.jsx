@@ -1,3 +1,6 @@
+import React from 'react';
+import { MultipleChoice } from '../MultipleChoice';
+
 export const Manicka = () => {
   return (
     <MultipleChoice
@@ -16,6 +19,7 @@ export const Manicka = () => {
           </p>
         </>
       }
+      optionType="image"
       options={{
         1: `/img/manicka1.png`,
         2: `/img/manicka2.png`,

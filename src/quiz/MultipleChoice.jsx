@@ -1,15 +1,21 @@
 import React from 'react';
 import { useState } from 'react';
 
-const initialState = {
-  1: false,
-  2: false,
-  3: false,
-  4: false,
+const getInitialState = (options) => {
+  const defaultOptions = Object.entries(options).map(([i]) => {
+    return [i, false];
+  });
+  return Object.fromEntries(defaultOptions);
 };
 
-export const MultipleChoice = ({ title, quizText, options, solution }) => {
-  const [selected, setSelected] = useState(initialState);
+export const MultipleChoice = ({
+  title,
+  quizText,
+  options,
+  solution,
+  optionType,
+}) => {
+  const [selected, setSelected] = useState(getInitialState(options));
   const [result, setResult] = useState(null);
   const handleClick = (id) => {
     setSelected((prevState) => ({
@@ -18,8 +24,6 @@ export const MultipleChoice = ({ title, quizText, options, solution }) => {
     }));
     setResult(null);
   };
-  const getImgStyle = (id) =>
-    selected[id] ? { border: '2px solid red' } : null;
 
   const evaluate = () => {
     if (JSON.stringify(selected) === JSON.stringify(solution)) {
@@ -35,15 +39,28 @@ export const MultipleChoice = ({ title, quizText, options, solution }) => {
       <h3>{title}</h3>
       {quizText}
       <div>
-        {Object.entries(options).map(([i, src]) => (
-          <img
-            key={i}
-            id={i}
-            onClick={() => handleClick(i)}
-            src={src}
-            alt=""
-            style={getImgStyle(i)}
-          />
+        {Object.entries(options).map(([i, value]) => (
+          <>
+            {optionType === 'image' && (
+              <img
+                key={i}
+                id={i}
+                onClick={() => handleClick(i)}
+                src={value}
+                alt=""
+                className={selected[i] ? 'selectedOption' : null}
+              />
+            )}
+            {optionType === 'text' && (
+              <button
+                key={i}
+                className={selected[i] ? 'selectedOption' : null}
+                onClick={() => handleClick(i)}
+              >
+                {value}
+              </button>
+            )}
+          </>
         ))}
       </div>
       <button onClick={evaluate}>Hotovo</button>

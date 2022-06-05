@@ -1,11 +1,12 @@
 import React from 'react';
 import './style.css';
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from 'react-vertical-timeline-component';
+import { VerticalTimeline } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import { TimelineContent } from '../TimelineContent';
+import { Comrads } from '../quiz/Comrads';
+import { Map } from '../quiz/Map';
+import { Manicka } from '../quiz/Manicka';
+import { SingleChoice } from '../quiz/SingleChoice/SingleChoice';
 
 const Timeline = () => (
   <VerticalTimeline lineColor={'#000000'} layout={'2-columns'}>
@@ -22,7 +23,7 @@ const Timeline = () => (
       text={
         'Nástup komunismu v Československu s sebou z dnešního pohledu přinesl i rozdělení společnosti na komunistické soudruhy a třídní nepřátele. Komunističtí soudruzi se pak ihned začali zbavovat svých třídních nepřátel, tedy lidí s odlišným politickým viděním světa, buržoazie, inteligence… Zdálo by se, že tedy být na té “správné” straně je vcelku jednoduchá záležitost a stačí k tomu stranická knížka KSČ a zápal pro věc. Obludnost komunistického totalitního režimu ale spočívala v tom, že na druhé straně barikády se mohl ocitnout najednou i ten, který likvidační mašinerii oponentů sám pomáhal budovat.'
       }
-      quiz={true}
+      quiz={<Comrads />}
       imgSrc={'/img/slansky.jpg'}
     />
     <TimelineContent
@@ -30,7 +31,7 @@ const Timeline = () => (
       text={
         'Otevřené hranice, takřka neomezené možnosti výběru destinace a minimální administrativa spojená s výjezdem do zahraničí jsou pro nás v podstatě samozřejmostí. Z tohoto pohodlí nás možná nakrátko vytrhly různé covidové semafory a lockdowny, ale starší generace si podobný “semafor” pamatují z celého období komunismu. Vyjet ven bylo zkrátka privilegium, kterého se nedostávalo všem.'
       }
-      quiz={true}
+      quiz={<Map />}
       imgSrc={'/img/cestovani.jpg'}
     />
     <TimelineContent
@@ -38,7 +39,7 @@ const Timeline = () => (
       text={
         'Režim líčil dlouhovlasé muže jako špinavé hašišáky. Lidé byli odváženi na služebnu a násilím stříháni. Příslušníci Veřejné bezpečnosti rozháněli koncerty a brutálně zakročovali proti těm, kteří si přišli jen poslechnout hudbu.'
       }
-      quiz={true}
+      quiz={<Manicka />}
       imgSrc={'img/manicky.jpg'}
     />
     <TimelineContent
@@ -54,7 +55,7 @@ const Timeline = () => (
       text={
         'Všechny československé kapely a hudebníci museli v 70. a 80. letech podstupovat ponižující zkoušky, aby mohly veřejně vystupovat.'
       }
-      quiz={true}
+      quiz={<SingleChoice />}
       imgSrc={'img/koncert.jpg'}
     />
     <TimelineContent

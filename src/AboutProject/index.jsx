@@ -6,6 +6,7 @@ import { SingleChoice } from '../quiz/SingleChoice/SingleChoice';
 import { Comrads } from '../quiz/Comrads';
 import { Manicka } from '../quiz/Manicka';
 import { BandNameMatch } from '../quiz/BandNameMatch';
+import { Map } from '../quiz/Map';
 
 const AboutProject = () => {
   return (
@@ -13,6 +14,9 @@ const AboutProject = () => {
       <h2>O projektu</h2>
       <div className="project-info">
         <BandNameMatch />
+        <Map />
+        <Comrads />
+        <Manicka />
 
         <p>
           Rády bychom vytvořily web věnovaný moderní historii, v co

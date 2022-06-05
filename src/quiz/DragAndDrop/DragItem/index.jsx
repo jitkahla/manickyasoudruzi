@@ -6,7 +6,7 @@ export const DragItem = ({ id, getDragItemClass }) => {
   const { attributes, listeners, setNodeRef } = useDraggable({ id });
   return (
     <div
-      className={`${getDragItemClass(id)} drag-item`}
+      className={`${getDragItemClass ? getDragItemClass(id) : null} drag-item`}
       ref={setNodeRef}
       {...attributes}
       {...listeners}

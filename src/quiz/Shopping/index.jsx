@@ -25,6 +25,7 @@ export function Shopping() {
     <div style={wrapperStyle}>
       <DndContext
         onDragStart={handleDragStart}
+        onDragOver={handleDragOver}
         onDragEnd={handleDragEnd}
       >
         <Container id="root" items={items.root} />
@@ -48,6 +49,42 @@ export function Shopping() {
     const { id } = active;
 
     setActiveId(id);
+  }
+
+  function handleDragOver(event) {
+    const { active, over } = event;
+    const { id } = active;
+    const overId = over?.id;
+
+    // Find the containers
+    const activeContainer = findContainer(id);
+    const overContainer = findContainer(overId);
+
+    if (
+      !activeContainer ||
+      !overContainer ||
+      activeContainer === overContainer
+    ) {
+      return;
+    }
+
+    setItems((prev) => {
+      const activeItems = prev[activeContainer];
+
+      // Find the indexes for the items
+      const activeIndex = activeItems.indexOf(id);
+
+      return {
+        ...prev,
+        [activeContainer]: [
+          ...prev[activeContainer].filter((item) => item !== active.id)
+        ],
+        [overContainer]: [
+          ...prev[overContainer],
+          items[activeContainer][activeIndex]
+        ]
+      };
+    });
   }
 
   function handleDragEnd(event) {

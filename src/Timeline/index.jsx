@@ -23,7 +23,7 @@ const Timeline = () => (
         'Nástup komunismu v Československu s sebou z dnešního pohledu přinesl i rozdělení společnosti na komunistické soudruhy a třídní nepřátele. Komunističtí soudruzi se pak ihned začali zbavovat svých třídních nepřátel, tedy lidí s odlišným politickým viděním světa, buržoazie, inteligence… Zdálo by se, že tedy být na té “správné” straně je vcelku jednoduchá záležitost a stačí k tomu stranická knížka KSČ a zápal pro věc. Obludnost komunistického totalitního režimu ale spočívala v tom, že na druhé straně barikády se mohl ocitnout najednou i ten, který likvidační mašinerii oponentů sám pomáhal budovat.'
       }
       quiz={true}
-      imgSrc={'/img/tuzex.jpg'}
+      imgSrc={'/img/slansky.jpg'}
     />
     <TimelineContent
       title={'Cestování za socialismu'}

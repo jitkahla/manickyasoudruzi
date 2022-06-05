@@ -5,7 +5,7 @@ import { DragItem } from '../DragItem';
 
 export const DroppableContainer = ({ id, items, title, imgSrc, imgAlt }) => {
   const { setNodeRef } = useDroppable({ id });
-  /* console.log(items); */
+
   return (
     <div className="droppable__image" ref={setNodeRef}>
       <h3>{title}</h3>

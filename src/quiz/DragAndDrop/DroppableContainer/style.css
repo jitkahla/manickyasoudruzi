@@ -1,7 +1,7 @@
 .droppable__image {
   border: 2px solid var(--border);
   margin-bottom: 10%;
-  line-height: 0;
+  line-height: 1;
   background-color: green;
 }
 .droppable__image img {

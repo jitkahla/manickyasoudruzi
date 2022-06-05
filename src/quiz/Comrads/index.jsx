@@ -1,7 +1,7 @@
 import React from 'react';
 import { MultipleChoice } from '../MultipleChoice';
 
-export const Soudruzi = () => {
+export const Comrads = () => {
   return (
     <MultipleChoice
       title="Soudruzi na věčné časy?"
@@ -12,7 +12,7 @@ export const Soudruzi = () => {
             skutečný záměr tohoto procesu (vyberte všechny možné správné
             odpovědi).
           </p>
-          <video controls src="/video/slansky-video.mp4"></video>
+          <video controls width="600" src="/video/slansky-video.mp4"></video>
         </>
       }
       optionType="text"

@@ -3,7 +3,7 @@ import { MultipleChoice } from '../quiz/MultipleChoice';
 import './style.css';
 import { Shopping } from '../quiz/Shopping';
 import { SingleChoice } from '../quiz/SingleChoice/SingleChoice';
-import { Soudruzi } from '../quiz/Soudruzi';
+import { Comrads } from '../quiz/Comrads';
 import { Manicka } from '../quiz/Manicka';
 
 const AboutProject = () => {
@@ -11,7 +11,7 @@ const AboutProject = () => {
     <main>
       <h2>O projektu</h2>
       <div className="project-info">
-        <Soudruzi />
+        <Comrads />
         <Manicka />
 
         <SingleChoice />

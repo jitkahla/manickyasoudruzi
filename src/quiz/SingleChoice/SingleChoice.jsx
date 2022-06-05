@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { SingleChoiceItem } from './SingleChoiceItem';
+import './style.css';
 
 export const SingleChoice = () => {
   return (

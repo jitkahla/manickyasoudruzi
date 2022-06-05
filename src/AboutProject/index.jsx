@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { MultipleChoice } from '../quiz/MultipleChoice';
 import './style.css';
 import { Shopping } from '../quiz/Shopping';
-import { SingleChoice } from '../quiz/SingleChoice';
+import { SingleChoice } from '../quiz/SingleChoice/SingleChoice';
 
 const AboutProject = () => {
   return (

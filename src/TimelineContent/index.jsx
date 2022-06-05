@@ -5,6 +5,9 @@ import { useModal, Modal } from 'react-morphing-modal';
 import 'react-morphing-modal/dist/ReactMorphingModal.css';
 
 export const TimelineContent = ({ title, text, quiz, imgSrc }) => {
+  const { modalProps, getTriggerProps } = useModal({
+    background: 'var(--background)',
+  });
   return (
     <VerticalTimelineElement
       className="vertical-timeline-element--work"
@@ -26,10 +29,17 @@ export const TimelineContent = ({ title, text, quiz, imgSrc }) => {
           <h3>{title}</h3>
           <p>{text}</p>
           {quiz ? (
-            <div className="box__controls">
-              <button className="box__button">Kvíz</button>
-              <button className="box__button box__button--more">Více...</button>
-            </div>
+            <>
+              <div className="box__controls">
+                <button className="box__button" {...getTriggerProps()}>
+                  Kvíz
+                </button>
+                <button className="box__button box__button--more">
+                  Více...
+                </button>
+              </div>
+              <Modal {...modalProps}>{quiz}</Modal>
+            </>
           ) : null}
         </div>
       </div>

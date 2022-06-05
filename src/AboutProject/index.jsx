@@ -5,7 +5,7 @@ import { Shopping } from '../quiz/Shopping';
 import { SingleChoice } from '../quiz/SingleChoice/SingleChoice';
 import { Comrads } from '../quiz/Comrads';
 import { Manicka } from '../quiz/Manicka';
-import { Map } from '../quiz/Map/Map';
+import { Map } from '../quiz/Map';
 
 const AboutProject = () => {
   return (

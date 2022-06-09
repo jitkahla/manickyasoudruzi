@@ -19,7 +19,11 @@ export const SingleChoiceItem = ({
             key={i + 1}
             onClick={() => setResult(text)}
             disabled={result !== null}
-            className={result === text ? 'selectedOption' : null}
+            className={
+              result === text
+                ? 'selected__option button__options'
+                : 'button__options'
+            }
           >
             {text}
           </button>

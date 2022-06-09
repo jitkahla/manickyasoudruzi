@@ -11,6 +11,6 @@
   color: var(--text);
 }
 
-.selectedOption {
+.selected__option {
   border: 2px solid black;
 }

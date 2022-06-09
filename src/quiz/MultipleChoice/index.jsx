@@ -51,7 +51,7 @@ export const MultipleChoice = ({
                 alt=""
                 className={
                   selected[i]
-                    ? 'selectedOption button__options'
+                    ? 'selected__option button__options'
                     : 'button__options'
                 }
               />
@@ -61,7 +61,7 @@ export const MultipleChoice = ({
                 key={i}
                 className={
                   selected[i]
-                    ? 'selectedOption button__options'
+                    ? 'selected__option button__options'
                     : 'button__options'
                 }
                 onClick={() => handleClick(i)}

@@ -21,7 +21,7 @@ export const SingleChoiceItem = ({
             disabled={result !== null}
             className={
               result === text
-                ? 'selectedOption button__options'
+                ? 'selected__option button__options'
                 : 'button__options'
             }
           >

@@ -18,7 +18,7 @@
 
 .bg-img {
   background: top/cover #00000090 url('img/andros.jpg') no-repeat fixed;
-  height: 100vh;
+  height: calc(100vh - 3rem);
   background-blend-mode: darken;
 }
 
@@ -86,6 +86,9 @@ nav a:focus {
 @media (max-width: 540px) {
   nav {
     display: none;
+  }
+  h1 {
+    text-align: center;
   }
 }
 @media (min-width: 540px) {

@@ -4,7 +4,7 @@ import { VerticalTimelineElement } from 'react-vertical-timeline-component';
 import { useModal, Modal } from 'react-morphing-modal';
 import 'react-morphing-modal/dist/ReactMorphingModal.css';
 
-export const TimelineContent = ({ title, text, quiz, imgSrc }) => {
+export const TimelineContent = ({ title, text, quiz, imgSrc, year }) => {
   const {
     modalProps: quizModalProps,
     getTriggerProps: getQuizTriggerProps,
@@ -30,41 +30,43 @@ export const TimelineContent = ({ title, text, quiz, imgSrc }) => {
 
   return (
     <VerticalTimelineElement
-      className="vertical-timeline-element--work"
-      contentStyle={{
-        background: 'var(--background)',
-        color: 'var(--text)',
-      }}
+      className="timeline__box"
       contentArrowStyle={{ borderRight: '7px solid  var(--red)' }}
       iconStyle={{
         background: 'var(--red)',
         color: '#fff',
         boxShadow: 'none',
       }}
-      icon={<span className="icon__text">1948</span>}
+      icon={<span>{year}</span>}
     >
-      <div className="timeline__box">
-        <img className="box__image" src={imgSrc} />
-        <div className="box__text">
-          <h3>{title}</h3>
-          <p>{text}</p>
-          <div className="box__controls">
-            {quiz ? (
-              <>
-                <button className="box__button" {...getQuizTriggerProps()}>
-                  Kvíz
-                </button>
-                <Modal {...quizModalProps}>{quiz}</Modal>
-              </>
-            ) : null}
-            <button
-              className="box__button box__button--more"
-              {...getTextTriggerProps()}
-            >
-              Více...
-            </button>
-            <Modal {...textModalProps}>Text</Modal>
-          </div>
+      <div
+        className="box__image"
+        style={{
+          background: `top/cover no-repeat url(${imgSrc}), linear-gradient(transparent, rgb(255, 255, 255))`,
+          backgroundBlendMode: 'overlay',
+          color: 'var(--text)',
+        }}
+      ></div>
+      <div className="box__text">
+        <h4>{title}</h4>
+        <p>{text}</p>
+
+        <div className="box__controls">
+          {quiz ? (
+            <>
+              <button className="box__button" {...getQuizTriggerProps()}>
+                Kvíz
+              </button>
+              <Modal {...quizModalProps}>{quiz}</Modal>
+            </>
+          ) : null}
+          <button
+            className="box__button box__button--more"
+            {...getTextTriggerProps()}
+          >
+            Více...
+          </button>
+          <Modal {...textModalProps}>Text</Modal>
         </div>
       </div>
     </VerticalTimelineElement>

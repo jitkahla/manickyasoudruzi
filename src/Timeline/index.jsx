@@ -10,7 +10,11 @@ import { SingleChoice } from '../quiz/SingleChoice/SingleChoice';
 import { Shopping } from '../quiz/Shopping';
 
 const Timeline = () => (
-  <VerticalTimeline lineColor={'#000000'} layout={'2-columns'}>
+  <VerticalTimeline
+    lineColor={'#000000'}
+    layout={'2-columns'}
+    className={'timeline-transition'}
+  >
     <TimelineContent
       title={'Komunisté se ujali moci'}
       text={
@@ -18,6 +22,7 @@ const Timeline = () => (
       }
       quiz={false}
       imgSrc={'/img/unor48.jpg'}
+      year={'1948'}
     />
     <TimelineContent
       title={'Soudruzi na věčné časy?'}

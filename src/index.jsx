@@ -20,18 +20,19 @@ const App = () => {
           className="nav-btn"
         ></button>
         <div className={navopen ? 'nav-mobile' : 'nav--closed nav-mobile'}>
-          <a onClick={closeNav} href="/Home">
+          <Link onClick={closeNav} to="/Home">
             Domů
-          </a>
-          <a onClick={closeNav} href="/AboutProject">
+          </Link>
+          <Link onClick={closeNav} to="/AboutProject">
             O projektu
-          </a>
-          <a onClick={closeNav} href="/Onas">
+          </Link>
+          <Link onClick={closeNav} to="/Onas">
             O nás
-          </a>
-          <a onClick={closeNav} href="/Kontakt">
+          </Link>
+          <Link to="/Home">Domů</Link>
+          <Link onClick={closeNav} to="/Kontakt">
             Kontakty
-          </a>
+          </Link>
         </div>
         <nav>
           <Link to="/Home">Domů</Link>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import { PageRefresh } from '../PageRefresh';
 
 const getInitialState = (options) => {
   const defaultOptions = Object.entries(options).map(([i]) => {
@@ -48,13 +49,21 @@ export const MultipleChoice = ({
                 onClick={() => handleClick(i)}
                 src={value}
                 alt=""
-                className={selected[i] ? 'selectedOption' : null}
+                className={
+                  selected[i]
+                    ? 'selectedOption button__options'
+                    : 'button__options'
+                }
               />
             )}
             {optionType === 'text' && (
               <button
                 key={i}
-                className={selected[i] ? 'selectedOption' : null}
+                className={
+                  selected[i]
+                    ? 'selectedOption button__options'
+                    : 'button__options'
+                }
                 onClick={() => handleClick(i)}
               >
                 {value}
@@ -63,9 +72,14 @@ export const MultipleChoice = ({
           </>
         ))}
       </div>
-      <button onClick={evaluate}>Hotovo</button>
-      {result === true && <p>Výborně</p>}
-      {result === false && <p>Špatně</p>}
+      <div>
+        <button className="box__button" onClick={evaluate}>
+          Hotovo
+        </button>
+        {result === true && <p>Výborně</p>}
+        {result === false && <p>Špatně</p>}
+      </div>
+      <PageRefresh />
     </div>
   );
 };

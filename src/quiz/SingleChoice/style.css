@@ -1,3 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@0;1&family=Sonsie+One&display=swap');
+
+.button__options {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+  font-family: 'Roboto Mono', sans-serif;
+  font-size: 1rem;
+  background-color: white;
+  color: var(--text);
+}
+
 .selectedOption {
   border: 2px solid black;
 }

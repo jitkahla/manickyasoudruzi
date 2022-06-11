@@ -1,0 +1,36 @@
+.more__title {
+  font-size: 2rem;
+  margin-bottom: 10%;
+}
+
+.more__text {
+  font-family: 'Roboto Mono', sans-serif;
+  font-size: 1.2rem;
+}
+
+.more__paragraph {
+  margin-bottom: 1rem;
+}
+
+.more h4 {
+  margin-top: 10%;
+}
+
+.more__source {
+  font-family: 'Roboto Mono', sans-serif;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 700px) {
+  .more__title {
+    font-size: 1.5rem;
+  }
+
+  .more__text {
+    font-size: 1rem;
+  }
+
+  .more__source {
+    font-size: 1rem;
+  }
+}

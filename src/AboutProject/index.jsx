@@ -1,23 +1,10 @@
 import React, { useState } from 'react';
-import { MultipleChoice } from '../quiz/MultipleChoice';
-import './style.css';
-import { Shopping } from '../quiz/Shopping';
-import { SingleChoice } from '../quiz/SingleChoice/SingleChoice';
-import { Comrads } from '../quiz/Comrads';
-import { Manicka } from '../quiz/Manicka';
-import { BandNameMatch } from '../quiz/BandNameMatch';
-import { Map } from '../quiz/Map';
 
 const AboutProject = () => {
   return (
     <main>
       <h2>O projektu</h2>
       <div className="project-info">
-        <BandNameMatch />
-        <Map />
-        <Comrads />
-        <Manicka />
-
         <p>
           Rády bychom vytvořily web věnovaný moderní historii, v co
           nejpoutavější formě s interaktivními prvky. Zpracujeme výběr několika

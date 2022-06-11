@@ -8,6 +8,8 @@ import { Map } from '../quiz/Map';
 import { Manicka } from '../quiz/Manicka';
 import { SingleChoice } from '../quiz/SingleChoice/SingleChoice';
 import { Shopping } from '../quiz/Shopping';
+import { Feb1948 } from '../info-texts/Feb1948';
+import { ComradInfo } from '../info-texts/ComradInfo';
 
 const Timeline = () => (
   <VerticalTimeline
@@ -23,6 +25,7 @@ const Timeline = () => (
       }
       quiz={false}
       imgSrc={'/img/unor48.jpg'}
+      moreInfo={<Feb1948 />}
     />
     <TimelineContent
       year={'1952'}
@@ -32,6 +35,7 @@ const Timeline = () => (
       }
       quiz={<Comrads />}
       imgSrc={'/img/slansky.jpg'}
+      moreInfo={<ComradInfo />}
     />
     <TimelineContent
       year={'1960'}

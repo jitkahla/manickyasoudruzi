@@ -4,7 +4,14 @@ import { VerticalTimelineElement } from 'react-vertical-timeline-component';
 import { useModal, Modal } from 'react-morphing-modal';
 import 'react-morphing-modal/dist/ReactMorphingModal.css';
 
-export const TimelineContent = ({ title, text, quiz, imgSrc, year }) => {
+export const TimelineContent = ({
+  title,
+  text,
+  quiz,
+  imgSrc,
+  year,
+  moreInfo,
+}) => {
   const {
     modalProps: quizModalProps,
     getTriggerProps: getQuizTriggerProps,
@@ -42,7 +49,7 @@ export const TimelineContent = ({ title, text, quiz, imgSrc, year }) => {
       <div
         className="box__image"
         style={{
-          background: `top/cover no-repeat url(${imgSrc}), linear-gradient(transparent, rgb(255, 255, 255))`,
+          background: `top/cover no-repeat url(${imgSrc}), linear-gradient(transparent, 80%, rgb(255, 255, 255))`,
           backgroundBlendMode: 'overlay',
           color: 'var(--text)',
         }}
@@ -66,7 +73,7 @@ export const TimelineContent = ({ title, text, quiz, imgSrc, year }) => {
           >
             Více...
           </button>
-          <Modal {...textModalProps}>Text</Modal>
+          <Modal {...textModalProps}>{moreInfo}</Modal>
         </div>
       </div>
     </VerticalTimelineElement>

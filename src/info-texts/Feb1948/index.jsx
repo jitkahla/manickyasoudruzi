@@ -6,7 +6,7 @@ export const Feb1948 = () => {
     <MoreAbout
       title={'Únor 1948'}
       text={
-        <div>
+        <div className="more">
           <div className="more__paragraph">
             Komunistická strana se minimálně od konce války snažila vytvořit
             podmínky, jež by jí umožnily chopit se veškeré moci ve státě.

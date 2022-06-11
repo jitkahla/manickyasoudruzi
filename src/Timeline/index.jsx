@@ -11,6 +11,8 @@ import { Shopping } from '../quiz/Shopping';
 import { Feb1948 } from '../info-texts/Feb1948';
 import { ComradInfo } from '../info-texts/ComradInfo';
 import { MapInfo } from '../info-texts/MapInfo';
+import { PragueSpring } from '../info-texts/PragueSpring';
+import { ManickaInfo } from '../info-texts/ManickaInfo';
 
 const Timeline = () => (
   <VerticalTimeline
@@ -56,6 +58,7 @@ const Timeline = () => (
       }
       quiz={<Manicka />}
       imgSrc={'img/manicky.jpg'}
+      moreInfo={<ManickaInfo />}
     />
     <TimelineContent
       year={'1968'}
@@ -65,6 +68,7 @@ const Timeline = () => (
       }
       quiz={false}
       imgSrc={'img/jaro.jpg'}
+      moreInfo={<PragueSpring />}
     />
 
     <TimelineContent

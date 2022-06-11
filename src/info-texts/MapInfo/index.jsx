@@ -7,7 +7,7 @@ export const MapInfo = () => {
     <MoreAbout
       title={'Cestování za socialismu'}
       text={
-        <div>
+        <div className="more">
           <div className="more__paragraph">
             Cestovatelský semafor mezi lety 1948 - 1989 vypadal zhruba
             následovně:

@@ -6,7 +6,7 @@ export const ComradInfo = () => {
     <MoreAbout
       title={'Politický monstrproces s Rudolfem Slánským'}
       text={
-        <div>
+        <div className="more">
           <div className="more__paragraph">
             Proces s Rudolfem Slánským a dalšími vrcholnými představiteli
             stranického a státního aparátu byl jedním z vykonstruovaných procesů

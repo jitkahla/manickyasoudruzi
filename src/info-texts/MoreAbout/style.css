@@ -12,6 +12,22 @@
   margin-bottom: 1rem;
 }
 
+.more h2,
+.more h3 {
+  text-align: left;
+  padding: 5% 0 5% 0;
+  margin: 0;
+  color: var(--text);
+}
+
+.more h2 {
+  font-size: 2rem;
+}
+
+.more h3 {
+  font-size: 1.5rem;
+}
+
 .more h4 {
   margin-top: 10%;
 }

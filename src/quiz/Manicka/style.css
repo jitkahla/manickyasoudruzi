@@ -59,7 +59,16 @@ q {
   border-radius: 0 1rem 0 0;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 499px) {
+  .header__img {
+    right: 1%;
+    height: 20%;
+    width: 55%;
+    top: 13%;
+  }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 999px) {
   .header__img {
     right: 1%;
     height: 25%;

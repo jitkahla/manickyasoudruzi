@@ -4,7 +4,7 @@ import { MoreAbout } from '../MoreAbout';
 export const ComradInfo = () => {
   return (
     <MoreAbout
-      title="Politický monstrproces s Rudolfem Slánským"
+      title={'Politický monstrproces s Rudolfem Slánským'}
       text={
         <div>
           <div className="more__paragraph">

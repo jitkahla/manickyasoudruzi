@@ -4,7 +4,7 @@ import { MoreAbout } from '../MoreAbout';
 export const Feb1948 = () => {
   return (
     <MoreAbout
-      title="Únor 1948"
+      title={'Únor 1948'}
       text={
         <div>
           <div className="more__paragraph">

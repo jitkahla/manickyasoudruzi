@@ -10,6 +10,7 @@ import { SingleChoice } from '../quiz/SingleChoice/SingleChoice';
 import { Shopping } from '../quiz/Shopping';
 import { Feb1948 } from '../info-texts/Feb1948';
 import { ComradInfo } from '../info-texts/ComradInfo';
+import { MapInfo } from '../info-texts/MapInfo';
 
 const Timeline = () => (
   <VerticalTimeline
@@ -45,6 +46,7 @@ const Timeline = () => (
       }
       quiz={<Map />}
       imgSrc={'/img/cestovani.jpg'}
+      moreInfo={<MapInfo />}
     />
     <TimelineContent
       year={'1966'}

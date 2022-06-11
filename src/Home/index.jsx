@@ -7,11 +7,13 @@ const Home = () => (
   <main>
     <div className="bg-img">
       <div className="container">
-        <h1>Máničky a soudruzi</h1>
+        <h1>Máničky a&nbsp;soudruzi</h1>
         <p>
-          Mrkni na naši časovou osu a zjisti něco o komunismu v Československu
+          Mrkni na naši časovou osu a zjisti něco o&nbsp;komunismu
+          v&nbsp;Československu
         </p>
       </div>
+      s
     </div>
     <Timeline />
   </main>

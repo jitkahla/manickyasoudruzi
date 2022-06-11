@@ -47,6 +47,13 @@ export const ConcertsInfo = () => {
               Proces s Plastic People of the Universe
             </a>
           </li>
+          <li>
+            Paměť národa:{' '}
+            <a href="Zkuste do toho vložit ten dělnickej vjem, radili normalizátoři muzikantům">
+              Zkuste do toho vložit ten dělnickej vjem, radili normalizátoři
+              muzikantům
+            </a>
+          </li>
         </ul>
       }
     />

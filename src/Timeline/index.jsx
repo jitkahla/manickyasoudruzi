@@ -15,6 +15,7 @@ import { PragueSpring } from '../info-texts/PragueSpring';
 import { ManickaInfo } from '../info-texts/ManickaInfo';
 import { ShoppingInfo } from '../info-texts/ShoppingInfo';
 import { ConcertsInfo } from '../info-texts/ConcertsInfo';
+import { Occupation } from '../info-texts/Occupation';
 
 const Timeline = () => (
   <VerticalTimeline
@@ -72,7 +73,16 @@ const Timeline = () => (
       imgSrc={'img/jaro.jpg'}
       moreInfo={<PragueSpring />}
     />
-
+    <TimelineContent
+      year={'1968'}
+      title={'Okupace'}
+      text={
+        'Invaze vojsk Varšavské smlouvy do Československa se uskutečnila 21. srpna 1968. Okupace byla vpádem armád pěti komunistických zemí Varšavské smlouvy podpořeným žádostí konzervativního křídla Komunistické strany Československa reagujícího na liberálně reformní vnitropolitické změny známé pod názvem Pražské jaro.'
+      }
+      quiz={false}
+      imgSrc={'/img/okupace.jpg'}
+      moreInfo={<Occupation />}
+    />
     <TimelineContent
       year={'1977'}
       title={'Žena za pultem'}

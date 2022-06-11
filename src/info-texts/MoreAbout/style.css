@@ -6,6 +6,7 @@
 .more__text {
   font-family: 'Roboto Mono', sans-serif;
   font-size: 1.2rem;
+  line-height: 1.5;
 }
 
 .more__paragraph {
@@ -35,6 +36,7 @@
 .more__source {
   font-family: 'Roboto Mono', sans-serif;
   font-size: 1.2rem;
+  line-height: 1.5;
 }
 
 @media (max-width: 700px) {

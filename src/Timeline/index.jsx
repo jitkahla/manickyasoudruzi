@@ -13,6 +13,7 @@ import { ComradInfo } from '../info-texts/ComradInfo';
 import { MapInfo } from '../info-texts/MapInfo';
 import { PragueSpring } from '../info-texts/PragueSpring';
 import { ManickaInfo } from '../info-texts/ManickaInfo';
+import { ShoppingInfo } from '../info-texts/ShoppingInfo';
 
 const Timeline = () => (
   <VerticalTimeline
@@ -79,6 +80,7 @@ const Timeline = () => (
       }
       quiz={<Shopping />}
       imgSrc={'img/zena-za-pultem.png'}
+      moreInfo={<ShoppingInfo />}
     />
     <TimelineContent
       year={'1980'}
@@ -88,6 +90,7 @@ const Timeline = () => (
       }
       quiz={<SingleChoice />}
       imgSrc={'img/koncert.jpg'}
+      moreInfo={<ShoppingInfo />}
     />
     <TimelineContent
       year={'1983'}

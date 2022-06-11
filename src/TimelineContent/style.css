@@ -38,7 +38,7 @@
 }
 
 .box__button {
-  height: 3rem;
+  min-height: 3rem;
   min-width: 8rem;
   font-family: 'Roboto Mono', sans-serif;
   font-size: 1.2rem;
@@ -46,6 +46,8 @@
   border-radius: 1rem;
   background-color: var(--red);
   color: white;
+  padding-right: 2%;
+  padding-left: 2%;
 }
 
 .box__button--more {

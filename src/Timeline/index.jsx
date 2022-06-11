@@ -18,6 +18,7 @@ import { ConcertsInfo } from '../info-texts/ConcertsInfo';
 import { Occupation } from '../info-texts/Occupation';
 import { Cecka } from '../info-texts/Cecka';
 import { Vekslaci } from '../info-texts/Vekslaci';
+import { Revolution } from '../info-texts/Revolution';
 
 const Timeline = () => (
   <VerticalTimeline
@@ -124,6 +125,16 @@ const Timeline = () => (
       quiz={false}
       imgSrc={'img/vekslaci.jpg'}
       moreInfo={<Vekslaci />}
+    />
+    <TimelineContent
+      year={'1989'}
+      title={'Sametová revoluce'}
+      text={
+        'Sametová revoluce bylo období politických změn v Československu mezi 17. listopadem a 29. prosincem 1989, které vedly k pádu komunistického režimu a přeměně politického zřízení na pluralitní demokracii a v oblasti hospodářství přechod plánované ekonomiky na tržní. Nazývá se tak proto, že ačkoliv nebylo pro převzetí moci použito násilí, výsledkem byla hluboká celospolečenská změna.'
+      }
+      quiz={false}
+      imgSrc={'img/revoluce.jpg'}
+      moreInfo={<Revolution />}
     />
   </VerticalTimeline>
 );

@@ -1,4 +1,6 @@
 import React from 'react';
+import { ComradInfo } from '../../info-texts/ComradInfo';
+import { Solution } from '../../info-texts/MoreAbout';
 import { MultipleChoice } from '../MultipleChoice';
 
 export const Comrads = () => {
@@ -26,6 +28,7 @@ export const Comrads = () => {
         }}
         solution={{ 1: true, 2: true, 3: true, 4: true, 5: false }}
       />
+      <Solution content={<ComradInfo />} />
     </>
   );
 };

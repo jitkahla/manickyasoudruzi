@@ -2,8 +2,11 @@
   border: 2px solid var(--border);
   margin-bottom: 10%;
   line-height: 1;
-  background-color: green;
+  padding: 1rem;
+  border-radius: 0.5rem;
 }
 .droppable__image img {
-  width: 100%;
+  object-fit: cover;
+  max-height: 6rem;
+  border-radius: 0.5rem;
 }

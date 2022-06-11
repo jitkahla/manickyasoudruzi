@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { DndContext, DragOverlay } from '@dnd-kit/core';
-
+import './style.css';
 import { DroppableContainer } from '../DragAndDrop/DroppableContainer';
 import { DragItem } from '../DragAndDrop/DragItem';
 
@@ -110,7 +110,17 @@ export const BandNameMatch = () => {
   console.log(message);
 
   return (
-    <DndContext onDragStart={handleDragStart} onDragEnd={handleDragEnd}>
+    <div className="quiz__box">
+      <div
+        className="header__img"
+        style={{
+          background: `top right/cover no-repeat url('img/pop-normalizace.jpg'), linear-gradient(to left, transparent, 80%, var(--background)), linear-gradient(to bottom, transparent, 80%, var(--background))`,
+          backgroundBlendMode: 'lighten',
+        }}
+      ></div>
+      <h2>Kvíz</h2>
+      <h3>Nevhodné názvy kapel</h3>
+
       <p>
         Zatímco v šedesátých letech mohly kapely, které hrály převzatý
         repertoár, zpívat v originále, v době normalizace musely svoje texty
@@ -120,52 +130,68 @@ export const BandNameMatch = () => {
         Poznáš, jak se kapely přejmenovaly, aby mohly vystupovat? Vyber původní
         anglický název a k němu změněný český:
       </p>
-
-      <section className="droppable__box">
-        <DroppableContainer
-          id={'root'}
-          title={`Názvy kapel v češtině`}
-          items={items.root}
-        />
-        <DroppableContainer
-          id={'taxmeni'}
-          title={`Taxmeni`}
-          items={items.taxmeni}
-        />
-        <DroppableContainer
-          id={'bgHoppers'}
-          title={`Bluesgrass Hoppers`}
-          items={items.bgHoppers}
-        />
-        <DroppableContainer
-          id={'greenhorns'}
-          title={`Greenhorns`}
-          items={items.greenhorns}
-        />
-        <DroppableContainer
-          id={'rangers'}
-          title={`Rangers`}
-          items={items.rangers}
-        />
-        <DroppableContainer
-          id={'blueEffect'}
-          title={`Blue Effect`}
-          items={items.blueEffect}
-        />
-        <DroppableContainer
-          id={'flamingo'}
-          title={`Flamingo`}
-          items={items.flamingo}
-        />
-        <DroppableContainer
-          id={'toronto'}
-          title={`Toronto`}
-          items={items.toronto}
-        />
-      </section>
-      <DragOverlay>{activeId ? <DragItem id={activeId} /> : null}</DragOverlay>
-      <button onClick={evaluate}>Vyhodnotit</button>
-      {message && <div>{message}</div>}
-    </DndContext>
+      <DndContext onDragStart={handleDragStart} onDragEnd={handleDragEnd}>
+        <section className="band_container droppable__box">
+          <div className="band__root">
+            <DroppableContainer
+              id={'root'}
+              title={`Názvy kapel v češtině`}
+              items={items.root}
+            />
+          </div>
+          <div className="band__names">
+            <DroppableContainer
+              id={'taxmeni'}
+              title={`Taxmeni`}
+              imgSrc={'img/taxmeni.jpg'}
+              items={items.taxmeni}
+            />
+            <DroppableContainer
+              id={'bgHoppers'}
+              title={`Bluesgrass Hoppers`}
+              imgSrc={'img/bghoppers.jpg'}
+              items={items.bgHoppers}
+            />
+            <DroppableContainer
+              id={'greenhorns'}
+              title={`Greenhorns`}
+              imgSrc={'img/greenhorns.jpg'}
+              items={items.greenhorns}
+            />
+            <DroppableContainer
+              id={'rangers'}
+              title={`Rangers`}
+              imgSrc={'img/rangers.jpg'}
+              items={items.rangers}
+            />
+            <DroppableContainer
+              id={'blueEffect'}
+              title={`Blue Effect`}
+              imgSrc={'img/beffekt.jpg'}
+              items={items.blueEffect}
+            />
+            <DroppableContainer
+              id={'flamingo'}
+              title={`Flamingo`}
+              imgSrc={'img/flamingo.jpg'}
+              items={items.flamingo}
+            />
+            <DroppableContainer
+              id={'toronto'}
+              title={`Toronto`}
+              imgSrc={'img/toronto.jpg'}
+              items={items.toronto}
+            />
+          </div>
+        </section>
+        <DragOverlay>
+          {activeId ? <DragItem id={activeId} /> : null}
+        </DragOverlay>
+        <button className="box__button" onClick={evaluate}>
+          Vyhodnotit
+        </button>
+        {message && <div>{message}</div>}
+      </DndContext>
+    </div>
   );
 };

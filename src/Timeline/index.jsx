@@ -3,6 +3,7 @@ import './style.css';
 import { VerticalTimeline } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import { TimelineContent } from '../TimelineContent';
+import { BandNameMatch } from '../quiz/BandNameMatch';
 import { Comrads } from '../quiz/Comrads';
 import { Map } from '../quiz/Map';
 import { Manicka } from '../quiz/Manicka';
@@ -109,7 +110,8 @@ const Timeline = () => (
       text={
         'Pokud bychom měli něčím charakterizovat „osmdesátky“ minulého století v Československu, tak nemůže snad být ikoničtější předmět než céčka. Plastové výlisky ve tvaru písmena „C“ byly opravdovým fenoménem především u odrostlejších dětí.'
       }
-      quiz={false}
+      /*Zatím jen pro nastylování, potom to dám jinam*/
+      quiz={<BandNameMatch />}
       imgSrc={'img/cecka.jpg'}
     />
     <TimelineContent

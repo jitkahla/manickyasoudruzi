@@ -15,7 +15,7 @@ export const DroppableContainer = ({
 
   return (
     <div className="droppable__image" ref={setNodeRef}>
-      <h3>{title}</h3>
+      <p>{title}</p>
       <img src={imgSrc} alt={imgAlt} />
       {items.map((item) => (
         <DragItem key={item} id={item} getDragItemClass={getDragItemClass} />

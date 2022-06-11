@@ -16,6 +16,8 @@ import { ManickaInfo } from '../info-texts/ManickaInfo';
 import { ShoppingInfo } from '../info-texts/ShoppingInfo';
 import { ConcertsInfo } from '../info-texts/ConcertsInfo';
 import { Occupation } from '../info-texts/Occupation';
+import { Cecka } from '../info-texts/Cecka';
+import { Vekslaci } from '../info-texts/Vekslaci';
 
 const Timeline = () => (
   <VerticalTimeline
@@ -111,6 +113,7 @@ const Timeline = () => (
       }
       quiz={false}
       imgSrc={'img/cecka.jpg'}
+      moreInfo={<Cecka />}
     />
     <TimelineContent
       year={'1987'}
@@ -120,6 +123,7 @@ const Timeline = () => (
       }
       quiz={false}
       imgSrc={'img/vekslaci.jpg'}
+      moreInfo={<Vekslaci />}
     />
   </VerticalTimeline>
 );

@@ -85,11 +85,22 @@ export const MultipleChoice = ({
         <button className="box__button" onClick={evaluate}>
           Vyhodnotit
         </button>
-        {result === true && <p>Výborně</p>}
-        {result === false && <p>Špatně</p>}
-
-        <PageRefresh />
       </div>
+      <div className="quiz__result">
+        {result === true && (
+          <p>
+            Výborně, bez ztráty kytičky. Zasloužíš pochvalu před nastoupenou
+            jednotkou a rozvinutou zástavou.
+          </p>
+        )}
+        {result === false && (
+          <p>
+            Ouha, chybička se vloudila. Asi ti zrádní imperialisté zamotali
+            hlavu.
+          </p>
+        )}
+      </div>
+      {/* <PageRefresh /> */}
     </div>
   );
 };

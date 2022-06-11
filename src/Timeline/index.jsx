@@ -23,7 +23,6 @@ const Timeline = () => (
       }
       quiz={false}
       imgSrc={'/img/unor48.jpg'}
-      year={'1948'}
     />
     <TimelineContent
       year={'1952'}

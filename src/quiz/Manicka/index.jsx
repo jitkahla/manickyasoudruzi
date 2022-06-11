@@ -10,7 +10,6 @@ export const Manicka = () => {
       quizText={
         <>
           <q>
-            {' '}
             Snažili se mě přesvědčit, ať se ostříhám, že mi to nesluší. Ať jsem
             rozumný. Odmítl jsem. Tak mi řekli, že budu mít problémy.
           </q>

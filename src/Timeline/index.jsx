@@ -14,6 +14,7 @@ import { MapInfo } from '../info-texts/MapInfo';
 import { PragueSpring } from '../info-texts/PragueSpring';
 import { ManickaInfo } from '../info-texts/ManickaInfo';
 import { ShoppingInfo } from '../info-texts/ShoppingInfo';
+import { ConcertsInfo } from '../info-texts/ConcertsInfo';
 
 const Timeline = () => (
   <VerticalTimeline
@@ -90,7 +91,7 @@ const Timeline = () => (
       }
       quiz={<SingleChoice />}
       imgSrc={'img/koncert.jpg'}
-      moreInfo={<ShoppingInfo />}
+      moreInfo={<ConcertsInfo />}
     />
     <TimelineContent
       year={'1983'}

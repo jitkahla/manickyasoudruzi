@@ -41,7 +41,7 @@ export const MultipleChoice = ({
       <div
         className="header__img"
         style={{
-          background: `top right/cover no-repeat url(${imgSrc}), linear-gradient(to left, transparent, var(--background)), linear-gradient(to bottom, transparent, var(--background))`,
+          background: `top right/cover no-repeat url(${imgSrc}), linear-gradient(to left, transparent, 80%, var(--background)), linear-gradient(to bottom, transparent, 80%, var(--background))`,
           backgroundBlendMode: 'lighten',
         }}
       ></div>
@@ -83,7 +83,7 @@ export const MultipleChoice = ({
       </div>
       <div className="controls">
         <button className="box__button" onClick={evaluate}>
-          Hotovo
+          Vyhodnotit
         </button>
         {result === true && <p>Výborně</p>}
         {result === false && <p>Špatně</p>}

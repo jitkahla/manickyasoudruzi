@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { PageRefresh } from '../PageRefresh';
+import './style.css';
 
 const getInitialState = (options) => {
   const defaultOptions = Object.entries(options).map(([i]) => {
@@ -15,6 +16,7 @@ export const MultipleChoice = ({
   options,
   solution,
   optionType,
+  imgSrc,
 }) => {
   const [selected, setSelected] = useState(getInitialState(options));
   const [result, setResult] = useState(null);
@@ -35,11 +37,18 @@ export const MultipleChoice = ({
   };
 
   return (
-    <div>
+    <div className="quiz__box">
+      <div
+        className="header__img"
+        style={{
+          background: `top right/cover no-repeat url(${imgSrc}), linear-gradient(to left, transparent, var(--background)), linear-gradient(to bottom, transparent, var(--background))`,
+          backgroundBlendMode: 'lighten',
+        }}
+      ></div>
       <h2>Kvíz</h2>
       <h3>{title}</h3>
       {quizText}
-      <div>
+      <div className="quiz__options">
         {Object.entries(options).map(([i, value]) => (
           <>
             {optionType === 'image' && (
@@ -72,14 +81,15 @@ export const MultipleChoice = ({
           </>
         ))}
       </div>
-      <div>
+      <div className="controls">
         <button className="box__button" onClick={evaluate}>
           Hotovo
         </button>
         {result === true && <p>Výborně</p>}
         {result === false && <p>Špatně</p>}
+
+        <PageRefresh />
       </div>
-      <PageRefresh />
     </div>
   );
 };

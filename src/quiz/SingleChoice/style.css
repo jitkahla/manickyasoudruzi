@@ -12,5 +12,5 @@
 }
 
 .selected__option {
-  border: 2px solid black;
+  border: 5px solid var(--border);
 }

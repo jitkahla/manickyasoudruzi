@@ -13,7 +13,7 @@ export const SingleChoiceItem = ({
     <div>
       <h4>{title}</h4>
       <audio controls src={audioSrc}></audio>
-      <div>
+      <div className="interpret__options">
         {options.map((text, i) => (
           <button
             key={i + 1}
@@ -21,17 +21,21 @@ export const SingleChoiceItem = ({
             disabled={result !== null}
             className={
               result === text
-                ? 'selected__option button__options'
-                : 'button__options'
+                ? 'interpret__name selected__option button__options'
+                : 'interpret__name button__options'
             }
           >
             {text}
           </button>
         ))}
       </div>
-      {result === correctOption && <p>Výborně</p>}
-      {result !== correctOption && result !== null && <p>Špatně</p>}
-      {result !== null && <div>Řešení: {resultText}</div>}
+      <div className="interpret__result">
+        {result === correctOption && <p>Skvělé!</p>}
+        {result !== correctOption && result !== null && (
+          <p>Bohužel, tady ses netrefil.</p>
+        )}
+        {result !== null && <p>Řešení: {resultText}</p>}
+      </div>
     </div>
   );
 };

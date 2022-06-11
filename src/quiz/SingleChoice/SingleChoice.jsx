@@ -4,9 +4,16 @@ import './style.css';
 
 export const SingleChoice = () => {
   return (
-    <div>
+    <div className="quiz__box">
+      <div
+        className="header__img"
+        style={{
+          background: `top right/cover no-repeat url('img/koncert.jpg'), linear-gradient(to left, transparent, 80%, var(--background)), linear-gradient(to bottom, transparent, 80%, var(--background))`,
+          backgroundBlendMode: 'lighten',
+        }}
+      ></div>
       <h2>Kvíz</h2>
-      <h3></h3>
+      <h3>Koncerty s povolením</h3>
       <p>
         Poslechni si následující audio ukázky z 80.let 20.století. Poznáš
         interpreta?

@@ -1,6 +1,6 @@
 import React from 'react';
 import { MultipleChoice } from '../MultipleChoice';
-import './style.css';
+import '../style.css';
 
 export const Manicka = () => {
   return (

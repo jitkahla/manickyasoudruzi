@@ -11,6 +11,37 @@
   color: var(--text);
 }
 
+.interpret__options {
+  display: flex;
+  flex-direction: column;
+}
+
 .selected__option {
-  border: 5px solid var(--border);
+  border: 3px solid var(--border);
+}
+
+.interpret__name {
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  background-color: goldenrod;
+  margin: 0;
+  max-width: 30rem;
+}
+
+audio {
+  border: 3px solid goldenrod;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+  max-width: 80vw;
+}
+
+.interpret__name.selected__option {
+  background-color: black;
+  color: goldenrod;
+  border: 3px solid goldenrod;
+}
+
+.interpret__result {
+  padding: 0 0.5rem 1rem 0;
+  font-style: italic;
 }

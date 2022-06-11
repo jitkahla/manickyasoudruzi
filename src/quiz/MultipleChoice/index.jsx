@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { PageRefresh } from '../PageRefresh';
-import './style.css';
+import '../style.css';
 
 const getInitialState = (options) => {
   const defaultOptions = Object.entries(options).map(([i]) => {

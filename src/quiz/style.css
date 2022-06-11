@@ -57,6 +57,7 @@ q {
   height: 25%;
   width: 35%;
   border-radius: 0 1rem 0 0;
+  z-index: -1;
 }
 
 @media only screen and (max-width: 499px) {
@@ -71,7 +72,7 @@ q {
 @media only screen and (min-width: 500px) and (max-width: 999px) {
   .header__img {
     right: 1%;
-    height: 25%;
+    height: 40%;
     width: 55%;
   }
 }

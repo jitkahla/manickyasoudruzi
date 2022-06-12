@@ -1,0 +1,10 @@
+.manicky_figure img {
+  min-width: auto;
+  border: none;
+  margin: 2rem 0 0;
+}
+
+.manicky_figure figcaption {
+  font-style: oblique;
+  font-size: 0.9rem;
+}

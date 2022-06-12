@@ -3,7 +3,7 @@ import { DndContext, DragOverlay } from '@dnd-kit/core';
 import './style.css';
 import { DroppableContainer } from '../DragAndDrop/DroppableContainer';
 import { DragItem } from '../DragAndDrop/DragItem';
-import { Solution } from '../../info-texts/MoreAbout';
+import { MoreAbout, Solution } from '../../info-texts/MoreAbout';
 import { West } from '../../info-texts/West';
 
 export const BandNameMatch = () => {

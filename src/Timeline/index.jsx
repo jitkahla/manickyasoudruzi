@@ -85,7 +85,7 @@ const Timeline = () => (
         'Invaze vojsk Varšavské smlouvy do Československa se uskutečnila 21. srpna 1968. Okupace byla vpádem armád pěti komunistických zemí Varšavské smlouvy podpořeným žádostí konzervativního křídla Komunistické strany Československa reagujícího na liberálně reformní vnitropolitické změny známé pod názvem Pražské jaro.'
       }
       quiz={false}
-      imgSrc={'/img/pop-normaliyace.jpg'}
+      imgSrc={'/img/okupace.jpg'}
       moreInfo={<Occupation />}
     />
     <TimelineContent

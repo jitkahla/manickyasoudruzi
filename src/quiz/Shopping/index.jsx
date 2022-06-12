@@ -256,10 +256,11 @@ export function Shopping() {
         <section className="droppable__box">
           <DroppableContainer
             id={'root'}
-            title={`Zboží k rozřazení`}
+            title={`Nákupní seznam`}
             items={items.root}
             getDragItemClass={getDragItemClass}
           />
+
           <DroppableContainer
             id={'available'}
             title={`Zboží běžně dostupné v obvyklých prodejnách (potraviny, drogerie,

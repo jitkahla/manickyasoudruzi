@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@0;1&family=Sonsie+One&display=swap');
 
-.band_container.droppable__box {
+.band__container.droppable__box {
   margin: 0;
   display: flex;
   justify-content: flex-start;
@@ -41,7 +41,7 @@
   width: 6rem;
 }
 
-.band_container .drag-item {
+.band__container .drag-item {
   height: 4rem;
   margin: 5px auto;
   border-radius: 0.5rem;

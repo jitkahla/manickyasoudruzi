@@ -20,6 +20,7 @@ import { Occupation } from '../info-texts/Occupation';
 import { Cecka } from '../info-texts/Cecka';
 import { Vekslaci } from '../info-texts/Vekslaci';
 import { Revolution } from '../info-texts/Revolution';
+import { West } from '../info-texts/West';
 
 const Timeline = () => (
   <VerticalTimeline
@@ -84,8 +85,18 @@ const Timeline = () => (
         'Invaze vojsk Varšavské smlouvy do Československa se uskutečnila 21. srpna 1968. Okupace byla vpádem armád pěti komunistických zemí Varšavské smlouvy podpořeným žádostí konzervativního křídla Komunistické strany Československa reagujícího na liberálně reformní vnitropolitické změny známé pod názvem Pražské jaro.'
       }
       quiz={false}
-      imgSrc={'/img/okupace.jpg'}
+      imgSrc={'/img/pop-normaliyace.jpg'}
       moreInfo={<Occupation />}
+    />
+    <TimelineContent
+      year={'1970'}
+      title={'Nenáviděný západ'}
+      text={
+        'V období socialistického Československa bylo vše ze Západu špatné a škodlivé, co pocházelo z Východu dobré a prospěšné. Železná opona tak měla oddělovat nejen státy a občany, ale také vzájemné vlivy včetně těch kulturních.'
+      }
+      quiz={<BandNameMatch />}
+      imgSrc={'/img/pop-normalizace.jpg'}
+      moreInfo={<West />}
     />
     <TimelineContent
       year={'1977'}

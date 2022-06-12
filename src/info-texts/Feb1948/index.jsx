@@ -47,6 +47,26 @@ export const Feb1948 = () => {
             </div>
           </div>
         }
+        source={
+          <ul>
+            <li>
+              My jsme to nevzdali:{' '}
+              <a href="https://www.myjsmetonevzdali.cz/temata/nastup-komunismu-a-padesata-leta/unor-1948/">
+                Únor 1948
+              </a>
+            </li>
+            <li>
+              Totalita.cz{' '}
+              <a href="https://www.totalita.cz/1948/1948.php">Únor 1948</a>
+            </li>
+            <li>
+              Paměť národa{' '}
+              <a href="https://www.pametnaroda.cz/cs/magazin/stalo-se/komunisticky-prevrat-v-unoru-1948">
+                Komunistický převrat v únoru 1948
+              </a>
+            </li>
+          </ul>
+        }
       />
     </>
   );

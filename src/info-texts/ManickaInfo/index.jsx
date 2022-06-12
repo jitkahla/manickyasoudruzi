@@ -32,6 +32,24 @@ export const ManickaInfo = () => {
           </div>
         </div>
       }
+      source={
+        <ul>
+          <li>
+            ČT24:{' '}
+            <a href="https://ct24.ceskatelevize.cz/domaci/1325666-policejni-akce-vlasatci-kniha-vratte-nam-vlasy-prinasi-nove-dokumenty">
+              Policejní akce Vlasatci - kniha Vraťte nám vlasy přináší nové
+              dokumenty
+            </a>
+          </li>
+          <li>
+            Válka.cz:{' '}
+            <a href="https://www.valka.cz/14860-Neprizpusobivi-Studenti-manicky-a-dalsi-pohledem-ceskoslovenskych-mocenskych-organu">
+              Nepřizpůsobiví - Studenti, máničky a další pohledem
+              československých mocenských orgánů
+            </a>
+          </li>
+        </ul>
+      }
     />
   );
 };

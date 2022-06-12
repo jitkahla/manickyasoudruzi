@@ -1,4 +1,5 @@
 import React from 'react';
+import './style.css';
 import { MoreAbout } from '../MoreAbout';
 
 export const ManickaInfo = () => {
@@ -7,6 +8,17 @@ export const ManickaInfo = () => {
       title={'Máničky'}
       text={
         <div className="more">
+          <div className="more__paragraph">
+            Správné řešení:
+            <figure className="manicky_figure">
+              <img src="img/manicky-problemove.png" alt="Problémové účesy" />
+              <figcaption>Tito by mohli mít problémy.</figcaption>
+            </figure>
+            <figure className="manicky_figure">
+              <img src="img/manicky-ok.png" alt="Účes v pořádku" />
+              <figcaption>A ten je v pohodě.</figcaption>{' '}
+            </figure>
+          </div>
           <div className="more__paragraph">
             Během léta a podzimu 1966 bylo násilím ostříháno téměř čtyři tisíce
             mladých mužů. Dlouhovlasým byl zakazován přístup do škol, do

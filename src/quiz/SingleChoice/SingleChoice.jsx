@@ -1,5 +1,7 @@
 import React from 'react';
 import { SingleChoiceItem } from './SingleChoiceItem';
+import { MoreAbout, Solution } from '../../info-texts/MoreAbout';
+import { ConcertsInfo } from '../../info-texts/ConcertsInfo';
 import './style.css';
 
 export const SingleChoice = () => {
@@ -59,6 +61,7 @@ export const SingleChoice = () => {
         correctOption={'Miroslav Žbirka'}
         resultText={'Miroslav Žbirka - 22 dní, rok 1984'}
       />
+      <Solution content={<ConcertsInfo />} />
     </div>
   );
 };

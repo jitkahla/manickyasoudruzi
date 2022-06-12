@@ -8,6 +8,17 @@ export const West = () => {
       text={
         <div className="more">
           <div className="more__paragraph">
+            <p>Správné řešení: </p>
+
+            <p>Kapela Toronto se přejmenovala na Brontosaury.</p>
+            <p>Z Flaminga se staly Plameňáci.</p>
+            <p>Blue Effect změnil jméno na M Efekt.</p>
+            <p>Rangers začali vystupovat jako Plavci.</p>
+            <p>Greenhorns se přejmenovali na Zelenáče.</p>
+            <p>Taxmeni zvolili název Krajánci.</p>
+            <p>A Bluesgrass hoppers zase Fešáci.</p>
+          </div>
+          <div className="more__paragraph">
             Režim ve snaze si získat mladou generaci plně kontroloval a využíval
             populární hudbu. Všechny texty písní musely projít schválením
             censora. Závadný text nebo jeho část musel být upraven. Bylo

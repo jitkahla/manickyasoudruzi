@@ -3,7 +3,7 @@ import { DndContext, DragOverlay } from '@dnd-kit/core';
 import './style.css';
 import { DroppableContainer } from '../DragAndDrop/DroppableContainer';
 import { DragItem } from '../DragAndDrop/DragItem';
-import { MoreAbout, Solution } from '../../info-texts/MoreAbout';
+import { Solution } from '../../info-texts/MoreAbout';
 import { West } from '../../info-texts/West';
 
 export const BandNameMatch = () => {
@@ -194,7 +194,7 @@ export const BandNameMatch = () => {
           <DragOverlay>
             {activeId ? <DragItem id={activeId} /> : null}
           </DragOverlay>
-          <button className="box__button" onClick={evaluate}>
+          <button className="box__button button--map" onClick={evaluate}>
             Vyhodnotit
           </button>
           {message && <div>{message}</div>}

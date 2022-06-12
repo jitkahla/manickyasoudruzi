@@ -46,6 +46,13 @@ export const Map = () => {
   return (
     <>
       <div className="map">
+        <div
+          className="header__img"
+          style={{
+            background: `top right/cover no-repeat url('img/cestovani.jpg'), linear-gradient(to left, transparent, 80%, var(--background)), linear-gradient(to bottom, transparent, 80%, var(--background))`,
+            backgroundBlendMode: 'lighten',
+          }}
+        ></div>
         <h2>Kvíz</h2>
         <h3>Cestování za socialismu</h3>
         <p className="map__text">

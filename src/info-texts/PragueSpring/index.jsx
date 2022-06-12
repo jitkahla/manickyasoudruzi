@@ -37,6 +37,22 @@ export const PragueSpring = () => {
             </div>
           </div>
         }
+        source={
+          <ul>
+            <li>
+              My jsme to nevzdali:{' '}
+              <a href="https://www.myjsmetonevzdali.cz/temata/prazske-jaro-a-okupace/prazske-jaro/">
+                Pražské jaro
+              </a>
+            </li>
+            <li>
+              Paměť národa{' '}
+              <a href="https://www.pametnaroda.cz/cs/prazske-jaro-2">
+                Pražské jaro
+              </a>
+            </li>
+          </ul>
+        }
       />
     </>
   );

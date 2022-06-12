@@ -66,6 +66,22 @@ export const Occupation = () => {
             </div>
           </div>
         }
+        source={
+          <ul>
+            <li>
+              My jsme to nevzdali:{' '}
+              <a href="https://www.myjsmetonevzdali.cz/temata/prazske-jaro-a-okupace/vpad-vojsk-varsavske-smlouvy/">
+                Vpád vojsk Varšavské smlouvy
+              </a>
+            </li>
+            <li>
+              Ústav pro studium totalitních režimů{' '}
+              <a href="https://www.ustrcr.cz/uvod/srpen-1968/srpen-1968-chronologie/">
+                Chronologie událostí 20. a 21. srpna 1968
+              </a>
+            </li>
+          </ul>
+        }
       />
     </>
   );

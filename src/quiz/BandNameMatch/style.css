@@ -48,3 +48,7 @@
   border: 2px solid var(--border);
   background-color: var(--background);
 }
+
+.band__button {
+  margin: 2rem 0 0;
+}

@@ -113,7 +113,19 @@ export const BandNameMatch = () => {
       setIsCorrect(false);
     }
   }
-  console.log(message);
+
+  const bandSolution = () => (
+    <div>
+      <p>Správné řešení: </p>
+      <p>Kapela Toronto se přejmenovala na Brontosaury.</p>
+      <p>Z Flaminga se staly Plameňáci.</p>
+      <p>Blue Effect změnil jméno na M Efekt.</p>
+      <p>Rangers začali vystupovat jako Plavci.</p>
+      <p>Greenhorns se přejmenovali na Zelenáče.</p>
+      <p>Taxmeni zvolili název Krajánci.</p>
+      <p>A Bluesgrass hoppers zase Fešáci.</p>
+    </div>
+  );
 
   return (
     <>
@@ -191,15 +203,19 @@ export const BandNameMatch = () => {
               />
             </div>
           </section>
+
           <DragOverlay>
             {activeId ? <DragItem id={activeId} /> : null}
           </DragOverlay>
-          <button className="box__button button--map" onClick={evaluate}>
+
+          <button className="box__button band__button" onClick={evaluate}>
             Vyhodnotit
           </button>
-          {message && <div>{message}</div>}
         </DndContext>
       </div>
+      {message && <p>{message}</p>}
+      {message && <div>{bandSolution()}</div>}
+
       <Solution content={<West />} />
     </>
   );

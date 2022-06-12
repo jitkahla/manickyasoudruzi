@@ -19,6 +19,7 @@ export const MultipleChoice = ({
   imgSrc,
   correctAnswer,
   wrongAnswer,
+  solutionText,
 }) => {
   const [selected, setSelected] = useState(getInitialState(options));
   const [result, setResult] = useState(null);
@@ -95,8 +96,8 @@ export const MultipleChoice = ({
       <div className="quiz__result">
         {result === true && <p>{correctAnswer}</p>}
         {result === false && <p>{wrongAnswer}</p>}
+        {result !== null && <div>{solutionText}</div>}
       </div>
-      {/* <PageRefresh /> */}
     </div>
   );
 };

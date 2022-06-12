@@ -5,6 +5,21 @@ import '../style.css';
 import { ManickaInfo } from '../../info-texts/ManickaInfo';
 
 export const Manicka = () => {
+  const manickaSolution = () => (
+    <div>
+      {' '}
+      Správné řešení:
+      <figure className="manicky_figure">
+        <img src="img/manicky-problemove.png" alt="Problémové účesy" />
+        <figcaption>Tito by mohli mít problémy.</figcaption>
+      </figure>
+      <figure className="manicky_figure">
+        <img src="img/manicky-ok.png" alt="Účes v pořádku" />
+        <figcaption>A ten je v pohodě.</figcaption>
+      </figure>{' '}
+    </div>
+  );
+
   return (
     <>
       <MultipleChoice
@@ -37,6 +52,7 @@ export const Manicka = () => {
         wrongAnswer={
           'Ouha, chybička se vloudila. Asi ti zrádní imperialisté zamotali hlavu.'
         }
+        solutionText={manickaSolution()}
       />
       <Solution content={<ManickaInfo />} />
     </>

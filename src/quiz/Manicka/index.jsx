@@ -1,4 +1,5 @@
 import React from 'react';
+import { Solution } from '../../info-texts/MoreAbout';
 import { MultipleChoice } from '../MultipleChoice';
 import { MoreAbout, Solution } from '../../info-texts/MoreAbout';
 import '../style.css';

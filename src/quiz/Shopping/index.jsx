@@ -4,6 +4,8 @@ import { DndContext, DragOverlay } from '@dnd-kit/core';
 import { DroppableContainer } from '../DragAndDrop/DroppableContainer';
 import './style.css';
 import { DragItem } from '../DragAndDrop/DragItem';
+import { Solution } from '../../info-texts/MoreAbout';
+import { ShoppingInfo } from '../../info-texts/ShoppingInfo';
 
 export function Shopping() {
   const [items, setItems] = useState({
@@ -216,10 +218,12 @@ export function Shopping() {
     };
 
     if (isAllTrue()) {
-      setMessage('Výborně. Všechno správně rozřazené.');
+      setMessage('Výborně, nakupování máš v malíku, co je doma, to se počítá!');
       setIsCorrect(true);
     } else {
-      setMessage('Škoda. Zkus to příště.');
+      setMessage(
+        'Asi se ti roztrhla síťovka a nesehnal jsi bony...Zkus to znovu.',
+      );
       setIsCorrect(false);
     }
   }
@@ -234,75 +238,74 @@ export function Shopping() {
   };
 
   return (
-    <div className="quiz__box">
-      <div
-        className="header__img"
-        style={{
-          background: `top right/cover no-repeat url('img/zena-za-pultem.png'), linear-gradient(to left, transparent, 80%, var(--background)), linear-gradient(to bottom, transparent, 80%, var(--background))`,
-          backgroundBlendMode: 'lighten',
-        }}
-      ></div>
-      <h2>Kvíz</h2>
-      <h3>Žena za pultem</h3>
-      <p>
-        Jak tedy vypadal nákupní zážitek běžného občana v polovině 70. let?
-        Rozdělte zboží do následujících kategorií podle dostupnosti.
-      </p>
+    <>
+      <div className="quiz__box">
+        <div
+          className="header__img"
+          style={{
+            background: `top right/cover no-repeat url('img/zena-za-pultem.png'), linear-gradient(to left, transparent, 80%, var(--background)), linear-gradient(to bottom, transparent, 80%, var(--background))`,
+            backgroundBlendMode: 'lighten',
+          }}
+        ></div>
+        <h2>Kvíz</h2>
+        <h3>Žena za pultem</h3>
+        <p>
+          Jak tedy vypadal nákupní zážitek běžného občana v polovině 70. let?
+          Rozdělte zboží do následujících kategorií podle dostupnosti.
+        </p>
 
-      <DndContext onDragStart={handleDragStart} onDragEnd={handleDragEnd}>
-        <button onClick={evaluate}>Vyhodnotit</button>
-
-        {message && <div>{message}</div>}
-        <section className="droppable__box">
-          <DroppableContainer
-            id={'root'}
-            title={`Nákupní seznam`}
-            items={items.root}
-            getDragItemClass={getDragItemClass}
-          />
-
-          <DroppableContainer
-            id={'available'}
-            title={`Zboží běžně dostupné v obvyklých prodejnách (potraviny, drogerie,
+        <DndContext onDragStart={handleDragStart} onDragEnd={handleDragEnd}>
+          <section className="shopping__box">
+            <div className="shopping__list">
+              <DroppableContainer
+                id={'root'}
+                items={items.root}
+                getDragItemClass={getDragItemClass}
+              />
+            </div>
+            <div className="store__containers">
+              <DroppableContainer
+                id={'available'}
+                title={`Zboží běžně dostupné v obvyklých prodejnách (potraviny, drogerie,
           řeznictví, apod.)`}
-            imgSrc={'/img/cart.png'}
-            imgAlt={'Nákupní košík'}
-            items={items.available}
-            getDragItemClass={getDragItemClass}
-          />
-          <DroppableContainer
-            id={'undercounter'}
-            title={`Podpultové (nedostatkové) - zboží - dostupné sezónně, nebo sporadicky
+                items={items.available}
+                getDragItemClass={getDragItemClass}
+              />
+              <DroppableContainer
+                id={'undercounter'}
+                title={`Podpultové (nedostatkové) - zboží - dostupné sezónně, nebo sporadicky
           a často získané pouze přes známosti nebo v dlouhých frontách`}
-            imgSrc={'/img/pult.jpeg'}
-            imgAlt={'Retro prodejna'}
-            items={items.undercounter}
-            getDragItemClass={getDragItemClass}
-          />
-          <DroppableContainer
-            id={'tuzex'}
-            title={`Zboží dostupné (až na výjimky) pouze v Tuzexu`}
-            imgSrc={'/img/tuzex.png'}
-            imgAlt={'Tuzex'}
-            items={items.tuzex}
-            getDragItemClass={getDragItemClass}
-          />
-          <DroppableContainer
-            id={'unavailable'}
-            title={`Zboží, které buď (už/ještě) neexistovalo nebo se k nám vůbec
+                items={items.undercounter}
+                getDragItemClass={getDragItemClass}
+              />
+              <DroppableContainer
+                id={'tuzex'}
+                title={`Zboží dostupné (až na výjimky) pouze v Tuzexu`}
+                items={items.tuzex}
+                getDragItemClass={getDragItemClass}
+              />
+              <DroppableContainer
+                id={'unavailable'}
+                title={`Zboží, které buď (už/ještě) neexistovalo nebo se k nám vůbec
           nedováželo`}
-            imgSrc={'/img/empty-basket.jpg'}
-            imgAlt={'Prázdný košík'}
-            items={items.unavailable}
-            getDragItemClass={getDragItemClass}
-          />
-        </section>
-        <DragOverlay>
-          {activeId ? (
-            <DragItem id={activeId} getDragItemClass={getDragItemClass} />
-          ) : null}
-        </DragOverlay>
-      </DndContext>
-    </div>
+                items={items.unavailable}
+                getDragItemClass={getDragItemClass}
+              />
+            </div>
+          </section>
+          <button className="box__button button--shopping" onClick={evaluate}>
+            Vyhodnotit
+          </button>
+
+          {message && <div>{message}</div>}
+          <DragOverlay>
+            {activeId ? (
+              <DragItem id={activeId} getDragItemClass={getDragItemClass} />
+            ) : null}
+          </DragOverlay>
+        </DndContext>
+      </div>
+      <Solution content={<ShoppingInfo />} />
+    </>
   );
 }

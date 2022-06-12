@@ -6,7 +6,7 @@ export const Feb1948 = () => {
   return (
     <>
       <div
-        className="header__img header__img--margin"
+        className="header__img"
         style={{
           background: `top right/cover no-repeat url('img/unor48.jpg'), linear-gradient(to left, transparent, 80%, var(--background)), linear-gradient(to bottom, transparent, 80%, var(--background))`,
           backgroundBlendMode: 'lighten',

@@ -15,13 +15,13 @@ const Contacts = () => {
           />
           <h3>Jitka Hladká</h3>
           <div className="contact__detail">
-            <img className="icon" src="/img/email_icon.png" alt="e-mail icon" />
+            <img className="icon" src="img/email_icon.png" alt="e-mail icon" />
             <p>jitka.hladka@gmail.com</p>
           </div>
           <div className="contact__detail">
             <img
               className="icon"
-              src="/img/linkedin_icon.png"
+              src="img/linkedin_icon.png"
               alt="LinkedIn icon"
             />
             <p>
@@ -62,7 +62,11 @@ const Contacts = () => {
             </p>
           </div>
           <div className="contact__detail">
-            <img className="icon" src="img/github_icon.png" alt="GitHub icon" />
+            <img
+              className="icon"
+              src="/img/github_icon.png"
+              alt="GitHub icon"
+            />
             <p>
               <a href="https://github.com/veronika-sesay">veronika-sesay</a>
             </p>

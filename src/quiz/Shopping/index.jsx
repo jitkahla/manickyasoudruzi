@@ -234,58 +234,74 @@ export function Shopping() {
   };
 
   return (
-    <DndContext onDragStart={handleDragStart} onDragEnd={handleDragEnd}>
-      <button onClick={evaluate}>Vyhodnotit</button>
+    <div className="quiz__box">
+      <div
+        className="header__img"
+        style={{
+          background: `top right/cover no-repeat url('img/zena-za-pultem.png'), linear-gradient(to left, transparent, 80%, var(--background)), linear-gradient(to bottom, transparent, 80%, var(--background))`,
+          backgroundBlendMode: 'lighten',
+        }}
+      ></div>
+      <h2>Kvíz</h2>
+      <h3>Žena za pultem</h3>
+      <p>
+        Jak tedy vypadal nákupní zážitek běžného občana v polovině 70. let?
+        Rozdělte zboží do následujících kategorií podle dostupnosti.
+      </p>
 
-      {message && <div>{message}</div>}
-      <section className="droppable__box">
-        <DroppableContainer
-          id={'root'}
-          title={`Zboží k rozřazení`}
-          items={items.root}
-          getDragItemClass={getDragItemClass}
-        />
-        <DroppableContainer
-          id={'available'}
-          title={`Zboží běžně dostupné v obvyklých prodejnách (potraviny, drogerie,
+      <DndContext onDragStart={handleDragStart} onDragEnd={handleDragEnd}>
+        <button onClick={evaluate}>Vyhodnotit</button>
+
+        {message && <div>{message}</div>}
+        <section className="droppable__box">
+          <DroppableContainer
+            id={'root'}
+            title={`Zboží k rozřazení`}
+            items={items.root}
+            getDragItemClass={getDragItemClass}
+          />
+          <DroppableContainer
+            id={'available'}
+            title={`Zboží běžně dostupné v obvyklých prodejnách (potraviny, drogerie,
           řeznictví, apod.)`}
-          imgSrc={'/img/cart.png'}
-          imgAlt={'Nákupní košík'}
-          items={items.available}
-          getDragItemClass={getDragItemClass}
-        />
-        <DroppableContainer
-          id={'undercounter'}
-          title={`Podpultové (nedostatkové) - zboží - dostupné sezónně, nebo sporadicky
+            imgSrc={'/img/cart.png'}
+            imgAlt={'Nákupní košík'}
+            items={items.available}
+            getDragItemClass={getDragItemClass}
+          />
+          <DroppableContainer
+            id={'undercounter'}
+            title={`Podpultové (nedostatkové) - zboží - dostupné sezónně, nebo sporadicky
           a často získané pouze přes známosti nebo v dlouhých frontách`}
-          imgSrc={'/img/pult.jpeg'}
-          imgAlt={'Retro prodejna'}
-          items={items.undercounter}
-          getDragItemClass={getDragItemClass}
-        />
-        <DroppableContainer
-          id={'tuzex'}
-          title={`Zboží dostupné (až na výjimky) pouze v Tuzexu`}
-          imgSrc={'/img/tuzex.png'}
-          imgAlt={'Tuzex'}
-          items={items.tuzex}
-          getDragItemClass={getDragItemClass}
-        />
-        <DroppableContainer
-          id={'unavailable'}
-          title={`Zboží, které buď (už/ještě) neexistovalo nebo se k nám vůbec
+            imgSrc={'/img/pult.jpeg'}
+            imgAlt={'Retro prodejna'}
+            items={items.undercounter}
+            getDragItemClass={getDragItemClass}
+          />
+          <DroppableContainer
+            id={'tuzex'}
+            title={`Zboží dostupné (až na výjimky) pouze v Tuzexu`}
+            imgSrc={'/img/tuzex.png'}
+            imgAlt={'Tuzex'}
+            items={items.tuzex}
+            getDragItemClass={getDragItemClass}
+          />
+          <DroppableContainer
+            id={'unavailable'}
+            title={`Zboží, které buď (už/ještě) neexistovalo nebo se k nám vůbec
           nedováželo`}
-          imgSrc={'/img/empty-basket.jpg'}
-          imgAlt={'Prázdný košík'}
-          items={items.unavailable}
-          getDragItemClass={getDragItemClass}
-        />
-      </section>
-      <DragOverlay>
-        {activeId ? (
-          <DragItem id={activeId} getDragItemClass={getDragItemClass} />
-        ) : null}
-      </DragOverlay>
-    </DndContext>
+            imgSrc={'/img/empty-basket.jpg'}
+            imgAlt={'Prázdný košík'}
+            items={items.unavailable}
+            getDragItemClass={getDragItemClass}
+          />
+        </section>
+        <DragOverlay>
+          {activeId ? (
+            <DragItem id={activeId} getDragItemClass={getDragItemClass} />
+          ) : null}
+        </DragOverlay>
+      </DndContext>
+    </div>
   );
 }

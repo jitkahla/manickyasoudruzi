@@ -100,10 +100,14 @@ export const BandNameMatch = () => {
     };
 
     if (isAllTrue()) {
-      setMessage('Výborně. Všechno správně přiřazené.');
+      setMessage(
+        'Skvělá práce, jen tak dál soudruhu. Jdeš příkladem nám všem.',
+      );
       setIsCorrect(true);
     } else {
-      setMessage('Škoda. Zkus to příště.');
+      setMessage(
+        'Ale soudruhu, toto se ti nepodařilo. Pokud máme splnit pětiletku, budeš se muset více snažit.',
+      );
       setIsCorrect(false);
     }
   }
@@ -127,7 +131,8 @@ export const BandNameMatch = () => {
         překládat do češtiny a často se měnily i názvy skupin.
       </p>
       <p>
-        Poznáš, jak se kapely přejmenovaly, aby mohly vystupovat? Přesuň český název k původnímu anglickému:
+        Poznáš, jak se kapely přejmenovaly, aby mohly vystupovat? Přesuň český
+        název k původnímu anglickému:
       </p>
       <DndContext onDragStart={handleDragStart} onDragEnd={handleDragEnd}>
         <section className="band_container droppable__box">

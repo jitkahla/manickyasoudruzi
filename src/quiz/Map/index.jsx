@@ -41,7 +41,21 @@ export const Map = () => {
     }
   };
   return (
-    <>
+    <div className="quiz__box">
+      <div
+        className="header__img"
+        style={{
+          background: `top right/cover no-repeat url('img/cestovani.jpg'), linear-gradient(to left, transparent, 80%, var(--background)), linear-gradient(to bottom, transparent, 80%, var(--background))`,
+          backgroundBlendMode: 'lighten',
+        }}
+      ></div>
+      <h2>Kvíz</h2>
+      <h3>Cestování za socialismu</h3>
+      <p>
+        Kam tedy mohla vést cesta běžného občana mezi lety 1948 - 1989? Vyznačte
+        na mapě země dle následujícího semaforu:
+      </p>
+
       <svg className="map" width="800" height="500" viewBox="0 0 150 118.34126">
         <Stat onSelect={onSelect} id="cs">
           <g id="cs" transform="translate(-437.60003,-61.212218)">
@@ -3434,6 +3448,6 @@ export const Map = () => {
       <button onClick={evaluate}>Hotovo</button>
       {result === true && <p>Výborně</p>}
       {result === false && <p>Špatně</p>}
-    </>
+    </div>
   );
 };

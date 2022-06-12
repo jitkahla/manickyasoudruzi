@@ -127,15 +127,14 @@ export const BandNameMatch = () => {
         překládat do češtiny a často se měnily i názvy skupin.
       </p>
       <p>
-        Poznáš, jak se kapely přejmenovaly, aby mohly vystupovat? Vyber původní
-        anglický název a k němu změněný český:
+        Poznáš, jak se kapely přejmenovaly, aby mohly vystupovat? Přesuň český název k původnímu anglickému:
       </p>
       <DndContext onDragStart={handleDragStart} onDragEnd={handleDragEnd}>
         <section className="band_container droppable__box">
           <div className="band__root">
             <DroppableContainer
               id={'root'}
-              title={`Názvy kapel v češtině`}
+              title={`Názvy kapel česky`}
               items={items.root}
             />
           </div>

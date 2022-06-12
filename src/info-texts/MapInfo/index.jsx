@@ -5,7 +5,7 @@ import { MoreAbout } from '../MoreAbout';
 export const MapInfo = () => {
   return (
     <MoreAbout
-      title={'Cestování za socialismu'}
+      title={'Dovolená za socialismu'}
       text={
         <div className="more">
           <div className="more__paragraph">
@@ -33,14 +33,16 @@ export const MapInfo = () => {
                 <p>
                   Země socialistického bloku, kde byla samozřejmě nutná výjezdní
                   doložka, ale i další potvrzení (např. vízum, zvací dopis) a
-                  výjezd podléhal určitým restrikcím.
+                  výjezd podléhal určitým restrikcím. Jednalo se o Albánii,
+                  Jugoslávii, Polsko a SSSR.
                 </p>
               </div>
               <div className="light__item">
                 <span className="icon__light icon__light--green"> </span>
                 <p>
                   Země bezvízového styku, pokud občan získal pas, měl v něm tzv.
-                  trvalou výjezdní doložku platnou pro tyto státy.
+                  trvalou výjezdní doložku platnou pro tyto státy - Bulharsko,
+                  Maďarsko, NDR, Rumunsko.
                 </p>
               </div>
             </div>

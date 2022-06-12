@@ -80,6 +80,10 @@
   .vertical-timeline-element-icon {
     font-size: 0.9rem;
   }
+
+  .box__button {
+    font-size: 1rem;
+  }
 }
 
 @media only screen and (min-width: 700px) {

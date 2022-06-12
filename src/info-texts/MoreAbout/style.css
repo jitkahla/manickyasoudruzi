@@ -1,11 +1,6 @@
-.more__title {
-  font-size: 2rem;
-  margin-bottom: 10%;
-}
-
 .more__text {
   font-family: 'Roboto Mono', sans-serif;
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 1.5;
 }
 
@@ -35,8 +30,12 @@
 
 .more__source {
   font-family: 'Roboto Mono', sans-serif;
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 1.5;
+}
+
+.button--solution {
+  margin-top: 6rem;
 }
 
 .solution {
@@ -48,15 +47,11 @@
 }
 
 @media (max-width: 700px) {
-  .more__title {
-    font-size: 1.5rem;
-  }
-
   .more__text {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 
   .more__source {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 }

@@ -28,6 +28,12 @@ export const Manicka = () => {
         4: `/img/manicka4.jpg`,
       }}
       solution={{ 1: true, 2: true, 3: true, 4: false }}
+      correctAnswer={
+        'Výborně, bez ztráty kytičky. Zasloužíš pochvalu před nastoupenou jednotkou a rozvinutou zástavou.'
+      }
+      wrongAnswer={
+        'Ouha, chybička se vloudila. Asi ti zrádní imperialisté zamotali hlavu.'
+      }
     />
   );
 };

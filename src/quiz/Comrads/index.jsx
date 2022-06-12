@@ -1,4 +1,5 @@
 import React from 'react';
+import './style.css';
 import { ComradInfo } from '../../info-texts/ComradInfo';
 import { Solution } from '../../info-texts/MoreAbout';
 import { MultipleChoice } from '../MultipleChoice';
@@ -15,7 +16,11 @@ export const Comrads = () => {
               skutečný záměr tohoto procesu (vyberte všechny možné správné
               odpovědi).
             </p>
-            <video controls width="600" src="/video/slansky-video.mp4"></video>
+            <video
+              controls
+              className="video"
+              src="/video/slansky-video.mp4"
+            ></video>
           </>
         }
         optionType="text"
@@ -23,10 +28,14 @@ export const Comrads = () => {
           1: 'Proces byl zkonstruován na výstrahu a varování všem komunistickým státům proti odchylkám od sovětské politiky.',
           2: 'Proces byl součástí antisemitské propagandistické kampaně.',
           3: 'Cílem procesu bylo ovlivnit veřejné mínění, ukázat na přítomnost tzv. vnitřního nepřítele a zastrašit tak případné další odpůrce režimu.',
-          4: 'Cílem bylo povzbudit pracující k vyšší produktivitě a dalšímu budování komunismu',
+          4: 'Cílem bylo povzbudit pracující k vyšší produktivitě a dalšímu budování komunismu.',
           5: 'Proces neměl žádný vedlejší cíl, jednalo se o standardní trestní řízení dle tehdy platných zákonů.',
         }}
         solution={{ 1: true, 2: true, 3: true, 4: true, 5: false }}
+        correctAnswer={
+          'Správně, tebe by s prorežimními fake news jen tak někdo nedostal.'
+        }
+        wrongAnswer={'Špatně ses naučil předepsaný skript, zkus to znovu.'}
       />
       <Solution content={<ComradInfo />} />
     </>

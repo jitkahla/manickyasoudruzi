@@ -17,6 +17,8 @@ export const MultipleChoice = ({
   solution,
   optionType,
   imgSrc,
+  correctAnswer,
+  wrongAnswer,
 }) => {
   const [selected, setSelected] = useState(getInitialState(options));
   const [result, setResult] = useState(null);
@@ -48,7 +50,11 @@ export const MultipleChoice = ({
       <h2>Kvíz</h2>
       <h3>{title}</h3>
       {quizText}
-      <div className="quiz__options">
+      <div
+        className={
+          optionType === 'image' ? 'quiz__options' : 'quiz__options--text'
+        }
+      >
         {Object.entries(options).map(([i, value]) => (
           <>
             {optionType === 'image' && (
@@ -70,8 +76,8 @@ export const MultipleChoice = ({
                 key={i}
                 className={
                   selected[i]
-                    ? 'selected__option button__options'
-                    : 'button__options'
+                    ? 'selected__option button__options--text'
+                    : 'button__options--text'
                 }
                 onClick={() => handleClick(i)}
               >
@@ -87,18 +93,8 @@ export const MultipleChoice = ({
         </button>
       </div>
       <div className="quiz__result">
-        {result === true && (
-          <p>
-            Výborně, bez ztráty kytičky. Zasloužíš pochvalu před nastoupenou
-            jednotkou a rozvinutou zástavou.
-          </p>
-        )}
-        {result === false && (
-          <p>
-            Ouha, chybička se vloudila. Asi ti zrádní imperialisté zamotali
-            hlavu.
-          </p>
-        )}
+        {result === true && <p>{correctAnswer}</p>}
+        {result === false && <p>{wrongAnswer}</p>}
       </div>
       {/* <PageRefresh /> */}
     </div>

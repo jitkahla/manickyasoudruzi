@@ -19,7 +19,7 @@ export const Solution = ({ content }) => {
   return (
     <>
       <button
-        className="box__button box__button--more"
+        className="box__button box__button--more button--solution"
         onClick={() => setGetSolution(!getSolution)}
       >
         Řešení

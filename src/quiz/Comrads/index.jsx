@@ -8,6 +8,7 @@ export const Comrads = () => {
   return (
     <>
       <MultipleChoice
+        imgSrc={'img/slansky.jpg'}
         title="Soudruzi na věčné časy?"
         quizText={
           <>

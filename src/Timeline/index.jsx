@@ -124,8 +124,7 @@ const Timeline = () => (
       text={
         'Pokud bychom měli něčím charakterizovat „osmdesátky“ minulého století v Československu, tak nemůže snad být ikoničtější předmět než céčka. Plastové výlisky ve tvaru písmena „C“ byly opravdovým fenoménem především u odrostlejších dětí.'
       }
-      /*Zatím jen pro nastylování, potom to dám jinam*/
-      quiz={<BandNameMatch />}
+      quiz={false}
       imgSrc={'img/cecka.jpg'}
       moreInfo={<Cecka />}
     />

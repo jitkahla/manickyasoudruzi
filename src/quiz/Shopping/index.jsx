@@ -268,8 +268,6 @@ export function Shopping() {
                 id={'available'}
                 title={`Zboží běžně dostupné v obvyklých prodejnách (potraviny, drogerie,
           řeznictví, apod.)`}
-                imgSrc={'/img/cart.png'}
-                imgAlt={'Nákupní košík'}
                 items={items.available}
                 getDragItemClass={getDragItemClass}
               />
@@ -277,16 +275,12 @@ export function Shopping() {
                 id={'undercounter'}
                 title={`Podpultové (nedostatkové) - zboží - dostupné sezónně, nebo sporadicky
           a často získané pouze přes známosti nebo v dlouhých frontách`}
-                imgSrc={'/img/pult.jpeg'}
-                imgAlt={'Retro prodejna'}
                 items={items.undercounter}
                 getDragItemClass={getDragItemClass}
               />
               <DroppableContainer
                 id={'tuzex'}
                 title={`Zboží dostupné (až na výjimky) pouze v Tuzexu`}
-                imgSrc={'/img/tuzex.png'}
-                imgAlt={'Tuzex'}
                 items={items.tuzex}
                 getDragItemClass={getDragItemClass}
               />
@@ -294,14 +288,12 @@ export function Shopping() {
                 id={'unavailable'}
                 title={`Zboží, které buď (už/ještě) neexistovalo nebo se k nám vůbec
           nedováželo`}
-                imgSrc={'/img/empty-basket.jpg'}
-                imgAlt={'Prázdný košík'}
                 items={items.unavailable}
                 getDragItemClass={getDragItemClass}
               />
             </div>
           </section>
-          <button className="box__button" onClick={evaluate}>
+          <button className="box__button button--shopping" onClick={evaluate}>
             Vyhodnotit
           </button>
 

@@ -1,11 +1,5 @@
 import React from 'react';
 import './style.css';
-import jitkaImg from '../img/jitka_profile.jpg';
-import veronikaImg from '../img/veronika_profile.jpg';
-import emailIcon from '../img/email_icon.png';
-import phoneIcon from '../img/phone_icon.png';
-import linkedInIcon from '../img/linkedin_icon.png';
-import githubIcon from '../img/github_icon.png';
 
 const Contacts = () => {
   return (
@@ -16,20 +10,20 @@ const Contacts = () => {
           <img
             className="profile-img"
             id="jitka-img"
-            src={jitkaImg}
+            src="img/jitka_profile.jpg"
             alt="Jitka Hladká"
           />
           <h3>Jitka Hladká</h3>
           <div className="contact__detail">
-            <img className="icon" src={emailIcon} alt="e-mail icon" />
+            <img className="icon" src="/img/email_icon.png" alt="e-mail icon" />
             <p>jitka.hladka@gmail.com</p>
           </div>
           <div className="contact__detail">
-            <img className="icon" src={phoneIcon} alt="phone icon" />
-            <p>+420 739 660 649</p>
-          </div>
-          <div className="contact__detail">
-            <img className="icon" src={linkedInIcon} alt="LinkedIn icon" />
+            <img
+              className="icon"
+              src="/img/linkedin_icon.png"
+              alt="LinkedIn icon"
+            />
             <p>
               <a href="https://linkedin.com/in/jitka-hladká-5a9b68228">
                 Jitka Hladká
@@ -37,7 +31,7 @@ const Contacts = () => {
             </p>
           </div>
           <div className="contact__detail">
-            <img className="icon" src={githubIcon} alt="GitHub icon" />
+            <img className="icon" src="img/github_icon.png" alt="GitHub icon" />
             <p>
               <a href="https://github.com/jitkahla">jitkahla</a>
             </p>
@@ -47,20 +41,20 @@ const Contacts = () => {
           <img
             className="profile-img"
             id="veronika-img"
-            src={veronikaImg}
+            src="img/veronika_profile.jpg"
             alt="Veronika Sesay"
           />
           <h3>Veronika Sesay</h3>
           <div className="contact__detail">
-            <img className="icon" src={emailIcon} alt="e-mail icon" />
+            <img className="icon" src="img/email_icon.png" alt="e-mail icon" />
             <p>veronika.sesay@gmail.com</p>
           </div>
           <div className="contact__detail">
-            <img className="icon" src={phoneIcon} alt="phone icon" />
-            <p>+420 775 955 051</p>
-          </div>
-          <div className="contact__detail">
-            <img className="icon" src={linkedInIcon} alt="LinkedIn icon" />
+            <img
+              className="icon"
+              src="img/linkedin_icon.png"
+              alt="LinkedIn icon"
+            />
             <p>
               <a href="https://linkedin.com/in/veronika-sesay-cz">
                 Veronika Sesay
@@ -68,7 +62,7 @@ const Contacts = () => {
             </p>
           </div>
           <div className="contact__detail">
-            <img className="icon" src={githubIcon} alt="GitHub icon" />
+            <img className="icon" src="img/github_icon.png" alt="GitHub icon" />
             <p>
               <a href="https://github.com/veronika-sesay">veronika-sesay</a>
             </p>

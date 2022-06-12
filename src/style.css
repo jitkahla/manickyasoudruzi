@@ -17,7 +17,7 @@
 }
 
 .bg-img {
-  background: top/cover #00000090 url('img/andros.jpg') no-repeat fixed;
+  background: top/cover #00000090 url('/public/img/andros2.jpg') no-repeat fixed;
   height: calc(100vh - 3rem);
   background-blend-mode: darken;
 }
@@ -50,7 +50,7 @@ nav a:focus {
 .nav-btn {
   width: 2rem;
   height: 2rem;
-  background-image: url('img/white-menu-icon.jpg');
+  background-image: url('/public/img/white-menu-icon.jpg');
   background-size: contain;
   background-color: transparent;
   margin: 0.5rem;

@@ -26,11 +26,10 @@ const App = () => {
           <Link onClick={closeNav} to="/AboutProject">
             O projektu
           </Link>
-          <Link onClick={closeNav} to="/Onas">
+          <Link onClick={closeNav} to="/AboutUs">
             O nás
           </Link>
-          <Link to="/Home">Domů</Link>
-          <Link onClick={closeNav} to="/Kontakt">
+          <Link onClick={closeNav} to="/Contacts">
             Kontakty
           </Link>
         </div>
